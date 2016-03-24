@@ -7,7 +7,7 @@ class Test extends Award {
       }
 
       public function get_icon() {
-            return "images/test.png";
+            return "test.png";
       }
 
       public function is_granted($relay) {

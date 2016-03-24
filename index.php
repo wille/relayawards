@@ -4,6 +4,7 @@
 
             <table>
                   <tr>
+                        <th>Country</th>
                         <th>Nickname</th>
                         <th>Fingerprint</th>
                         <th>Address</th>
@@ -20,6 +21,7 @@ $relays = Relays::query_relays(htmlspecialchars($_GET["s"]));
 
 foreach ($relays as $relay) {
       echo "<tr>";
+      echo '<td><img src="images/flags/'. $relay->country . '.png">' . $relay->country_name . "</td>";
       echo "<td>" . $relay->nick . "</td>";
       echo "<td>" . $relay->fingerprint . "</td>";
       echo "<td>" . $relay->or_addresses[0] . "</td>";
@@ -38,7 +40,7 @@ foreach ($relays as $relay) {
       if ($has_awards) {
             echo "<td>";
             foreach ($granted as $award) {
-                  echo '<img src="' . $award->get_icon() . '">';
+                  echo '<img src="images/awards/' . $award->get_icon() . '">';
                   echo $award->get_name();
             }
             echo "</td>";
