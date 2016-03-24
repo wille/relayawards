@@ -56,8 +56,7 @@ foreach ($relays as $relay) {
       if ($has_awards) {
             echo "<td>";
             foreach ($granted as $award) {
-                  echo '<img src="images/awards/' . $award->get_icon() . '">';
-                  echo $award->get_name();
+                  echo '<a href="awards/awards.php?award=' . urlencode($award->get_name()) . '"><img src="images/awards/' . $award->get_icon() . '" alt="' . $award->get_name() . '"></a>';
             }
             echo "</td>";
       }

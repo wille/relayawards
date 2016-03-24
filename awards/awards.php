@@ -17,3 +17,12 @@ $awards = [
       new Red_Diamond(),
       new Blue_Diamond()
 ];
+
+if (isset($_GET["award"])) {
+      foreach ($awards as $award) {
+            if ($award->get_name() == htmlspecialchars(urldecode($_GET["award"]))) {
+                  echo $award->get_description();
+                  exit();
+            }
+      }
+}
