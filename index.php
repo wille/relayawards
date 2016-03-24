@@ -9,6 +9,7 @@
                         <th>Fingerprint</th>
                         <th>Address</th>
                         <th>Platform</th>
+                        <th>Flags</th>
                         <th>Awards</th>
                   </tr>
 
@@ -42,6 +43,12 @@ foreach ($relays as $relay) {
       echo "<td>" . $relay->fingerprint . "</td>";
       echo "<td>" . $relay->or_addresses[0] . "</td>";
       echo '<td><img src="images/os/' . get_os_icon($relay) . '">' . $relay->platform . "</td>";
+
+      echo "<td>";
+      foreach ($relay->flags as $flag) {
+            echo '<img src="images/relay_flags/' . $flag . '.png" alt="' . $flag . '">';
+      }
+      echo "</td>";
 
       $granted = array();
 
