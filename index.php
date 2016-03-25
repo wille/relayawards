@@ -7,6 +7,7 @@
                         <th>Country</th>
                         <th>Nickname</th>
                         <th>Fingerprint</th>
+                        <th>Uptime</th>
                         <th>Address</th>
                         <th>Platform</th>
                         <th>Flags</th>
@@ -41,6 +42,9 @@ foreach ($relays as $relay) {
       echo '<td><img src="images/flags/'. $relay->country . '.png">' . $relay->country_name . "</td>";
       echo "<td>" . $relay->nick . "</td>";
       echo "<td>" . $relay->fingerprint . "</td>";
+
+      echo "<td>" . $relay->get_uptime() . "</td>";
+
       echo "<td>" . $relay->or_addresses[0] . "</td>";
       echo '<td><img src="images/os/' . get_os_icon($relay) . '">' . $relay->platform . "</td>";
 
