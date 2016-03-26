@@ -43,7 +43,14 @@ foreach ($relays as $relay) {
       echo "<td>" . $relay->nick . "</td>";
       echo "<td>" . $relay->fingerprint . "</td>";
 
-      echo "<td>" . $relay->get_uptime() . "</td>";
+      $uptime = $relay->get_uptime();
+      if (!$uptime) {
+            $uptime = "n/a";
+      } else {
+            $uptime = $uptime["days"] . " days " . $uptime["hours"] . " hours";
+      }
+
+      echo "<td>" . $uptime . "</td>";
 
       echo "<td>" . $relay->or_addresses[0] . "</td>";
       echo '<td><img src="images/os/' . get_os_icon($relay) . '">' . $relay->platform . "</td>";

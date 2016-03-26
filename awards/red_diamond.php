@@ -15,7 +15,7 @@ class Red_Diamond extends Award {
       }
 
       public function is_granted($relay) {
-            return true;
+            return $relay->get_uptime()["days"] >= 10;
       }
 
 }
