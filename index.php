@@ -8,6 +8,7 @@
                         <th>Nickname</th>
                         <th>Fingerprint</th>
                         <th>Uptime</th>
+                        <th>Bandwidth</th>
                         <th>Address</th>
                         <th>Platform</th>
                         <th>Flags</th>
@@ -51,6 +52,8 @@ foreach ($relays as $relay) {
       }
 
       echo "<td>" . $uptime . "</td>";
+
+      echo "<td>" . $relay->get_current_bandwidth() . "</td>";
 
       echo "<td>" . $relay->or_addresses[0] . "</td>";
       echo '<td><img src="images/os/' . get_os_icon($relay) . '">' . $relay->platform . "</td>";
