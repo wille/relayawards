@@ -1,20 +1,24 @@
-<html>
-
-      <body>
-
-            <table>
-                  <tr>
-                        <th>Country</th>
-                        <th>Nickname</th>
-                        <th>Fingerprint</th>
-                        <th>Uptime</th>
-                        <th>Bandwidth</th>
-                        <th>Address</th>
-                        <th>Platform</th>
-                        <th>Flags</th>
-                        <th>Awards</th>
-                  </tr>
-
+<?php
+require_once "header.php";
+?>
+            <div class="container">
+                    <div class="row">
+                          <div class="container">
+                                <table class="table">
+                                      <thead>
+                                          <tr>
+                                                <th>Country</th>
+                                                <th>Nickname</th>
+                                                <th>Fingerprint</th>
+                                                <th>Uptime</th>
+                                                <th>Bandwidth</th>
+                                                <th>Address</th>
+                                                <th>Platform</th>
+                                                <th>Flags</th>
+                                                <th>Awards</th>
+                                          </tr>
+                                    </thead>
+                                    <tbody>
 <?php
 
 require_once "relays.php";
@@ -85,9 +89,10 @@ foreach ($relays as $relay) {
 }
 
 ?>
-
-            </table>
-
+                                    </tbody>
+                              </table>
+                        </div>
+                  </div>
+            </div>
       </body>
-
 </html>
