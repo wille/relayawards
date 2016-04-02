@@ -1,18 +1,20 @@
 <?php
 require_once "header.php";
+require_once "utils.php";
+require_once "relays.php";
 ?>
 
 <?php
 $fp = $_GET["fp"];
 
 if (!isset($fp)) {
-      die();
+      die("fp parameter not set");
 }
 
 $relays = Relays::query_relays(htmlspecialchars($fp));
 
 if (count($relays) != 1) {
-      die();
+      die("More than one or no relays found");
 }
 
 $relay = $relays[0];
