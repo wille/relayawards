@@ -46,7 +46,7 @@ foreach ($relays as $relay) {
       echo "<tr>";
       echo '<td><img src="images/flags/'. $relay->country . '.png">' . $relay->country_name . "</td>";
       echo "<td>" . $relay->nick . "</td>";
-      echo "<td>" . $relay->fingerprint . "</td>";
+      echo '<td><a href="relay.php?fp=' . $relay->fingerprint . '">' . $relay->fingerprint . "</a></td>";
 
       $uptime = $relay->get_uptime();
       if (!$uptime) {
