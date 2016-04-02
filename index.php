@@ -8,10 +8,10 @@ require_once "inc/utils.php";
                                 <table class="table">
                                       <thead>
                                           <tr>
-                                                <th>Country</th>
                                                 <th>Nickname</th>
                                                 <th>Uptime</th>
                                                 <th>Bandwidth</th>
+                                                <th>Country</th>
                                                 <th>Flags</th>
                                                 <th>Awards</th>
                                           </tr>
@@ -26,12 +26,12 @@ $relays = Relays::query_relays(htmlspecialchars($_GET["s"]));
 
 foreach ($relays as $relay) {
       echo "<tr>";
-      echo '<td><img src="images/flags/'. $relay->country . '.png">' . $relay->country_name . "</td>";
       echo '<td><a href="relay.php?fp=' . $relay->fingerprint . '">' . $relay->nick . "</a></td>";
 
       echo "<td>" . format_uptime($relay) . "</td>";
 
       echo "<td>" . $relay->get_current_bandwidth() . "</td>";
+      echo '<td><img src="images/flags/'. $relay->country . '.png"></td>';
 
       echo "<td>";
       foreach ($relay->flags as $flag) {
