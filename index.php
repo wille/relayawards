@@ -13,8 +13,6 @@ require_once "inc/utils.php";
                                                 <th>Fingerprint</th>
                                                 <th>Uptime</th>
                                                 <th>Bandwidth</th>
-                                                <th>Address</th>
-                                                <th>Platform</th>
                                                 <th>Flags</th>
                                                 <th>Awards</th>
                                           </tr>
@@ -36,9 +34,6 @@ foreach ($relays as $relay) {
       echo "<td>" . format_uptime($relay) . "</td>";
 
       echo "<td>" . $relay->get_current_bandwidth() . "</td>";
-
-      echo "<td>" . $relay->or_addresses[0] . "</td>";
-      echo '<td><img src="images/os/' . get_os_icon($relay) . '">' . $relay->platform . "</td>";
 
       echo "<td>";
       foreach ($relay->flags as $flag) {
