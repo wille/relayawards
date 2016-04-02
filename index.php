@@ -10,7 +10,6 @@ require_once "inc/utils.php";
                                           <tr>
                                                 <th>Country</th>
                                                 <th>Nickname</th>
-                                                <th>Fingerprint</th>
                                                 <th>Uptime</th>
                                                 <th>Bandwidth</th>
                                                 <th>Flags</th>
@@ -28,8 +27,7 @@ $relays = Relays::query_relays(htmlspecialchars($_GET["s"]));
 foreach ($relays as $relay) {
       echo "<tr>";
       echo '<td><img src="images/flags/'. $relay->country . '.png">' . $relay->country_name . "</td>";
-      echo "<td>" . $relay->nick . "</td>";
-      echo '<td><a href="relay.php?fp=' . $relay->fingerprint . '">' . $relay->fingerprint . "</a></td>";
+      echo '<td><a href="relay.php?fp=' . $relay->fingerprint . '">' . $relay->nick . "</a></td>";
 
       echo "<td>" . format_uptime($relay) . "</td>";
 
