@@ -12,7 +12,6 @@ require_once "inc/utils.php";
                                                 <th>Uptime</th>
                                                 <th>Bandwidth</th>
                                                 <th>Country</th>
-                                                <th>Flags</th>
                                                 <th>Awards</th>
                                           </tr>
                                     </thead>
@@ -33,12 +32,6 @@ foreach ($relays as $relay) {
       echo "<td>" . $relay->get_current_bandwidth() . "</td>";
       echo '<td><img src="images/flags/'. $relay->country . '.png"></td>';
 
-      echo "<td>";
-      foreach ($relay->flags as $flag) {
-            echo '<img src="images/relay_flags/' . $flag . '.png" alt="' . $flag . '">';
-      }
-      echo "</td>";
-
       $granted = array();
 
       foreach ($awards as $award) {
@@ -52,7 +45,7 @@ foreach ($relays as $relay) {
       if ($has_awards) {
             echo "<td>";
             foreach ($granted as $award) {
-                  echo '<a href="awards/awards.php?award=' . urlencode($award->get_name()) . '"><img src="images/awards/' . $award->get_icon() . '" alt="' . $award->get_name() . '"></a>';
+                  echo '<a href="awards/awards.php?award=' . urlencode($award->get_name()) . '"><img src="images/awards/' . $award->get_icon() . '" alt="' . $award->get_name() . '" width=24px height=24px></a>';
             }
             echo "</td>";
       }
