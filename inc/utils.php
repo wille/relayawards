@@ -16,6 +16,17 @@ function get_os_icon($relay) {
       }
 }
 
+function format_uptime($relay) {
+      $uptime = $relay->get_uptime();
+      if (!$uptime) {
+            $uptime = "n/a";
+      } else {
+            $uptime = $uptime["days"] . " days " . $uptime["hours"] . " hours";
+      }
+
+      return $uptime;
+}
+
 
 
 

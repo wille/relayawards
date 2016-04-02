@@ -33,14 +33,7 @@ foreach ($relays as $relay) {
       echo "<td>" . $relay->nick . "</td>";
       echo '<td><a href="relay.php?fp=' . $relay->fingerprint . '">' . $relay->fingerprint . "</a></td>";
 
-      $uptime = $relay->get_uptime();
-      if (!$uptime) {
-            $uptime = "n/a";
-      } else {
-            $uptime = $uptime["days"] . " days " . $uptime["hours"] . " hours";
-      }
-
-      echo "<td>" . $uptime . "</td>";
+      echo "<td>" . format_uptime($relay) . "</td>";
 
       echo "<td>" . $relay->get_current_bandwidth() . "</td>";
 
