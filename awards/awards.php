@@ -13,11 +13,13 @@ abstract class Award {
 include_once "blue_diamond.php";
 include_once "red_diamond.php";
 include_once "lightning_1.php";
+include_once "exotic.php";
 
 $awards = [
       new Red_Diamond(),
       new Blue_Diamond(),
-      new Lightning1()
+      new Lightning1(),
+      new Exotic()
 ];
 
 if (isset($_GET["award"])) {
