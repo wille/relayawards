@@ -2,6 +2,7 @@
 require_once "header.php";
 require_once "relays.php";
 require_once "inc/utils.php";
+require_once "awards/awards.php";
 ?>
 
 <?php
@@ -21,6 +22,26 @@ $relay = $relays[0];
 
 ?>
             <center>
+                  <h4>Rewards</h4>
+
+                  <?php
+                  $granted = array();
+
+                  foreach ($awards as $award) {
+                        if ($award->is_granted($relay)) {
+                              $granted[] = $award;
+                        }
+                  }
+
+                  $has_awards = count($granted) > 0;
+
+                  if ($has_awards) {
+                        foreach ($granted as $award) {
+                              echo '<a href="awards/awards.php?award=' . urlencode($award->get_name()) . '"><img src="images/awards/' . $award->get_icon() . '" alt="' . $award->get_name() . '" width=24px height=24px></a>';
+                        }
+                  }
+                  ?>
+
                   <h4>Nickname</h4>
                   <p><?php echo $relay->nick; ?></p>
 
