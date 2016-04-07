@@ -31,6 +31,8 @@ $awards = [
       new Lightning25(),
       new Lightning50(),
       new Https_Lover(),
+      new ConsensusWeight1(),
+      new ConsensusWeight2(),
       new Exotic()
 ];
 
