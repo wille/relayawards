@@ -34,6 +34,8 @@ include_once "exit_probability_2.php";
 include_once "middle_probability_1.php";
 include_once "middle_probability_2.php";
 
+include_once "unix.php";
+
 $awards = [
       new Red_Diamond(), new Blue_Diamond(),
       new Lightning5(), new Lightning10(), new Lightning25(), new Lightning50(),
@@ -41,7 +43,8 @@ $awards = [
       new ConsensusWeight1(), new ConsensusWeight2(),
       new ExitProbability1(), new ExitProbability2(),
       new MiddleProbability1(), new MiddleProbability2(),
-      new Exotic()
+      new Exotic(),
+      new Unix()
 ];
 
 if (isset($_GET["award"])) {
