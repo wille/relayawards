@@ -9,6 +9,7 @@
 | ![Lightning 3](images/awards/lightning_1.png) Lightning 3 | 25 MB/s or more in bandwidth speed
 | ![Lightning 4](images/awards/lightning_1.png) Lightning 4 | 50 MB/s or more in bandwidth speed
 | ![Exotic](images/awards/exotic.png) Exotic | Node placed in an exotic country
+| ![HTTPS Lover](images/awards/404.png) HTTPS Lover | Uses port 80 or 443 in DirPort or ORPort
 
 ## Adding new awards
 
