@@ -35,6 +35,7 @@ include_once "middle_probability_1.php";
 include_once "middle_probability_2.php";
 
 include_once "unix.php";
+include_once "guard.php";
 
 $awards = [
       new Red_Diamond(), new Blue_Diamond(),
@@ -45,6 +46,7 @@ $awards = [
       new MiddleProbability1(), new MiddleProbability2(),
       new Exotic(),
       new Unix()
+      new Guard(),
 ];
 
 if (isset($_GET["award"])) {
