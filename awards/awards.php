@@ -16,12 +16,23 @@ abstract class Award {
 
 include_once "blue_diamond.php";
 include_once "red_diamond.php";
+
 include_once "lightning_1.php";
 include_once "lightning_2.php";
 include_once "lightning_3.php";
 include_once "lightning_4.php";
+
 include_once "https_lover.php";
 include_once "exotic.php";
+
+include_once "consensus_weight_1.php";
+include_once "consensus_weight_2.php";
+
+include_once "exit_probability_1.php";
+include_once "exit_probability_2.php";
+
+include_once "middle_probability_1.php";
+include_once "middle_probability_2.php";
 
 $awards = [
       new Red_Diamond(), new Blue_Diamond(),
