@@ -1,9 +1,9 @@
 <?php
 
-class Lightning5 extends Award {
+class Lightning25 extends Award {
 
       public function get_name() {
-            return "Lightning 1";
+            return "Lightning 3";
       }
 
       public function get_icon() {
@@ -11,11 +11,11 @@ class Lightning5 extends Award {
       }
 
       public function get_description() {
-            return "Over 5 MB/s in bandwidth";
+            return "Over 25 MB/s in bandwidth";
       }
 
       public function is_granted($relay) {
-            $mb = pow(1024, 2) * 5;
+            $mb = pow(1024, 2) * 25;
 
             return $relay->bandwidth >= $mb;
       }
