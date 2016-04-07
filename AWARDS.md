@@ -4,7 +4,10 @@
 | :--- | :-----
 | ![Blue Diamond](images/awards/blue_diamond.png) Blue Diamond | 25 or more days of uptime
 | ![Red Diamond](images/awards/red_diamond.png) Red Diamond | 10 or more days of uptime
-| ![Lightning](images/awards/lightning_1.png) Lightning | 5 MB/s or more in bandwidth speed
+| ![Lightning 1](images/awards/lightning_1.png) Lightning 1 | 5 MB/s or more in bandwidth speed
+| ![Lightning 2](images/awards/lightning_1.png) Lightning 2 | 10 MB/s or more in bandwidth speed
+| ![Lightning 3](images/awards/lightning_1.png) Lightning 3 | 25 MB/s or more in bandwidth speed
+| ![Lightning 4](images/awards/lightning_1.png) Lightning 4 | 50 MB/s or more in bandwidth speed
 | ![Exotic](images/awards/exotic.png) Exotic | Node placed in an exotic country
 
 ## Adding new awards
