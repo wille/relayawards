@@ -24,15 +24,11 @@ include_once "https_lover.php";
 include_once "exotic.php";
 
 $awards = [
-      new Red_Diamond(),
-      new Blue_Diamond(),
-      new Lightning5(),
-      new Lightning10(),
-      new Lightning25(),
-      new Lightning50(),
+      new Red_Diamond(), new Blue_Diamond(),
+      new Lightning5(), new Lightning10(), new Lightning25(), new Lightning50(),
       new Https_Lover(),
-      new ConsensusWeight1(),
-      new ConsensusWeight2(),
+      new ConsensusWeight1(), new ConsensusWeight2(),
+      new ExitProbability1(), new ExitProbability2(),
       new Exotic()
 ];
 
