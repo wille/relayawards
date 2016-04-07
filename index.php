@@ -13,6 +13,7 @@ require_once "inc/utils.php";
                                                 <th>Bandwidth</th>
                                                 <th>Country</th>
                                                 <th>Awards</th>
+                                                <th>Running</th>
                                           </tr>
                                     </thead>
                                     <tbody>
@@ -49,6 +50,9 @@ foreach ($relays as $relay) {
             }
             echo "</td>";
       }
+
+      echo '<td><p><font color="' . ($relay->running ? "00ff00" : "ff0000") . "">" . ($relay->running ? "Running" : "Not running") . "</font></p></td>";
+
       echo "</tr>";
 }
 
