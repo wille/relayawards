@@ -51,7 +51,7 @@ foreach ($relays as $relay) {
             echo "</td>";
       }
 
-      echo '<td><p><font color="' . ($relay->running ? "00ff00" : "ff0000") . "">" . ($relay->running ? "Running" : "Not running") . "</font></p></td>";
+      echo '<td><p><font color="' . ($relay->running ? "00ff00" : "ff0000") . '">' . ($relay->running ? "Running" : "Not running") . "</font></p></td>";
 
       echo "</tr>";
 }
