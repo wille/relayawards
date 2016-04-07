@@ -20,6 +20,7 @@ include_once "lightning_1.php";
 include_once "lightning_2.php";
 include_once "lightning_3.php";
 include_once "lightning_4.php";
+include_once "https_lover.php";
 include_once "exotic.php";
 
 $awards = [
@@ -29,6 +30,7 @@ $awards = [
       new Lightning10(),
       new Lightning25(),
       new Lightning50(),
+      new Https_Lover(),
       new Exotic()
 ];
 
