@@ -3,7 +3,11 @@
 abstract class Award {
 
       public abstract function get_name();
-      public abstract function get_icon();
+
+      public function get_icon() {
+            return "404.png";
+      };
+
       public abstract function get_description();
       public abstract function is_granted($relay);
 
