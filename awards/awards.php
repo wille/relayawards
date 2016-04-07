@@ -29,6 +29,7 @@ $awards = [
       new Https_Lover(),
       new ConsensusWeight1(), new ConsensusWeight2(),
       new ExitProbability1(), new ExitProbability2(),
+      new MiddleProbability1(), new MiddleProbability2(),
       new Exotic()
 ];
 
