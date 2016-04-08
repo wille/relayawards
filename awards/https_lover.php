@@ -15,7 +15,7 @@ class Https_Lover extends Award {
       }
 
       public function is_granted($relay) {
-            foreach ($adr as $relay->or_addresses) {
+            foreach ($relay->or_addresses as $adr) {
                   if (is_correct_port($adr)) {
                         return true;
                   }
