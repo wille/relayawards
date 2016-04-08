@@ -6,7 +6,7 @@ abstract class Award {
 
       public function get_icon() {
             return "404.png";
-      };
+      }
 
       public abstract function get_description();
       public abstract function is_granted($relay);
@@ -46,7 +46,7 @@ $awards = [
       new ExitProbability1(), new ExitProbability2(),
       new MiddleProbability1(), new MiddleProbability2(),
       new Exotic(),
-      new Unix()
+      new Unix(),
       new Guard(),
       new Alpha()
 ];
