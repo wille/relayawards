@@ -11,7 +11,7 @@ class Ipv6 extends Award {
       }
 
       public function get_description() {
-            return "";
+            return "IPV6 support in DirAdr or ORAdr";
       }
 
       public function is_granted($relay) {
