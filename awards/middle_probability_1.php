@@ -11,11 +11,11 @@ class MiddleProbability1 extends Award {
       }
 
       public function get_description() {
-            return "Over 0.01% mean middle probability fraction";
+            return "Over 0.1% mean middle probability fraction";
       }
 
       public function is_granted($relay) {
-            return $relay->middle_probability >= 0.01;
+            return $relay->middle_probability >= 0.1;
       }
 
 }
