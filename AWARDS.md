@@ -5,6 +5,7 @@
 | ![Red Diamond](images/rewards/10_days_uptime.png) - | 10 or more days of uptime
 | ![Blue Diamond](images/rewards/20_days_uptime.png) - | 20 or more days of uptime
 | ![Blue Diamond](images/rewards/50_days_uptime.png) - | 50 or more days of uptime
+| ![Blue Diamond](images/rewards/150_days_uptime.png) - | 150 or more days of uptime
 | ![Blue Diamond](images/rewards/1_year_uptime.png) - | 1 year of uptime
 | ![Blue Diamond](images/rewards/2_year_uptime.png) - | 2 years of uptime
 | ![Lightning 1](images/rewards/5_mb_speed.png) Lightning 5 | 5 MB/s or more in bandwidth speed
