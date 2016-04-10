@@ -21,7 +21,7 @@
 | ![Middle Probability 2](images/rewards/404.png) Middle Probability 2 | Over 0.05% mean middle probability fraction
 | ![Alpha](images/rewards/alpha.png) Alpha | Is running an alpha version of Tor
 | ![Unix](images/rewards/linux.png) Unix | Runs Linux or *BSD 
-| ![IPV6](images/rewards/ipv6.png) IPV6 | IPV6 support in DirAdr or ORAdr
+| ![IPV6](images/rewards/IPv6.png) IPV6 | IPV6 support in DirAdr or ORAdr
 
 ## Adding new awards
 
