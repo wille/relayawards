@@ -7,7 +7,7 @@ class MiddleProbability1 extends Award {
       }
 
       public function get_icon() {
-            return parent::get_icon();
+            return "middle_prob_1.png";
       }
 
       public function get_description() {

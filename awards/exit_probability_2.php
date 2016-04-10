@@ -7,7 +7,7 @@ class ExitProbability2 extends Award {
       }
 
       public function get_icon() {
-            return parent::get_icon();
+            return "exit_prob_0.5%.png";
       }
 
       public function get_description() {

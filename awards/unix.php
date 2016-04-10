@@ -7,7 +7,7 @@ class Unix extends Award {
       }
 
       public function get_icon() {
-            return parent::get_icon();
+            return "linux.png";
       }
 
       public function get_description() {

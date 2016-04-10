@@ -6,6 +6,10 @@ class Https_Lover extends Award {
             return "HTTPS Lover";
       }
 
+      public function get_icon() {
+            return "https_lover.png";
+      }
+
       public function get_description() {
             return "Uses port 80 or 443 in DirPort or ORPort";
       }

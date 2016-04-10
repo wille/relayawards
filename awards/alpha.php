@@ -7,7 +7,7 @@ class Alpha extends Award {
       }
 
       public function get_icon() {
-            return parent::get_icon();
+            return "alpha.png";
       }
 
       public function get_description() {
