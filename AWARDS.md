@@ -12,8 +12,9 @@
 | ![Lightning 50](images/rewards/50_mb_speed.png) Lightning 50 | 50 MB/s or more in bandwidth speed
 | ![Exotic](images/rewards/exotic.png) Exotic | Node placed in an exotic country
 | ![HTTPS Lover](images/rewards/404.png) HTTPS Lover | Uses port 80 or 443 in DirPort or ORPort
-| ![Consensus Weight 1](images/rewards/404.png) Consensus Weight 1 | Over 0.01% mean consensus weight fraction
-| ![Consensus Weight 2](images/rewards/404.png) Consensus Weight 2 | Over 0.05% mean consensus weight fraction
+| ![Guard Probability 1](images/rewards/guard_prob_1.png) Consensus Weight 1 | Over 0.1% mean guard probability fraction
+| ![Guard Probability 2](images/rewards/guard_prob_2.png) Consensus Weight 2 | Over 0.5% mean guard probability fraction
+| ![Guard Probability 3](images/rewards/guard_prob_3.png) Consensus Weight 3 | Over 1% mean guard probability fraction
 | ![Exit Probability 1](images/rewards/exit_prob_0.1%25.png) Exit Probability 1 | Over 0.1% mean exit probability fraction
 | ![Exit Probability 2](images/rewards/exit_prob_0.5%25.png) Exit Probability 2 | Over 0.5% mean exit probability fraction
 | ![Exit Probability 3](images/rewards/exit_prob_1%25.png) Exit Probability 3 | Over 1% mean exit probability fraction
