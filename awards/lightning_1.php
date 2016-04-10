@@ -7,7 +7,7 @@ class Lightning5 extends Award {
       }
 
       public function get_icon() {
-            return "lightning_1.png";
+            return "5_mb_speed.png";
       }
 
       public function get_description() {
