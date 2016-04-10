@@ -14,8 +14,9 @@
 | ![HTTPS Lover](images/rewards/404.png) HTTPS Lover | Uses port 80 or 443 in DirPort or ORPort
 | ![Consensus Weight 1](images/rewards/404.png) Consensus Weight 1 | Over 0.01% mean consensus weight fraction
 | ![Consensus Weight 2](images/rewards/404.png) Consensus Weight 2 | Over 0.05% mean consensus weight fraction
-| ![Exit Probability 1](images/rewards/404.png) Exit Probability 1 | Over 0.01% mean exit probability fraction
-| ![Exit Probability 2](images/rewards/404.png) Exit Probability 2 | Over 0.05% mean exit probability fraction
+| ![Exit Probability 1](images/rewards/exit_prob_0.1%.png) Exit Probability 1 | Over 0.1% mean exit probability fraction
+| ![Exit Probability 2](images/rewards/exit_prob_0.5%.png) Exit Probability 2 | Over 0.5% mean exit probability fraction
+| ![Exit Probability 3](images/rewards/exit_prob_1%.png) Exit Probability 3 | Over 1% mean exit probability fraction
 | ![Middle Probability 1](images/rewards/404.png) Middle Probability 1 | Over 0.01% mean middle probability fraction
 | ![Middle Probability 2](images/rewards/404.png) Middle Probability 2 | Over 0.05% mean middle probability fraction
 | ![Alpha](images/rewards/alpha.png) Alpha | Is running an alpha version of Tor
