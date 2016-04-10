@@ -2,8 +2,9 @@
 
 | Name | Requirements
 | :--- | :-----
-| ![Blue Diamond](images/rewards/blue_diamond.png) Blue Diamond | 25 or more days of uptime
-| ![Red Diamond](images/rewards/red_diamond.png) Red Diamond | 10 or more days of uptime
+| ![Red Diamond](images/rewards/10_days_uptime.png) - | 10 or more days of uptime
+| ![Blue Diamond](images/rewards/20_days_uptime.png) - | 20 or more days of uptime
+| ![Blue Diamond](images/rewards/50_days_uptime.png) - | 50 or more days of uptime
 | ![Lightning 1](images/rewards/5_mb_speed.png) Lightning 5 | 5 MB/s or more in bandwidth speed
 | ![Lightning 10](images/rewards/10_mb_speed.png) Lightning 10 | 10 MB/s or more in bandwidth speed
 | ![Lightning 15](images/rewards/15_mb_speed.png) Lightning 15 | 15 MB/s or more in bandwidth speed
