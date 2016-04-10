@@ -2,7 +2,7 @@
 class Lightning75 extends Award {
       
       public function get_name() {
-            return "Lightning 7";
+            return "Lightning 6";
       }
       public function get_icon() {
             return "king.png";
