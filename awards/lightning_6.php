@@ -1,7 +1,8 @@
 <?php
-class Lightning50 extends Award {
+class Lightning75 extends Award {
+      
       public function get_name() {
-            return "Lightning 5";
+            return "Lightning 7";
       }
       public function get_icon() {
             return "king.png";
