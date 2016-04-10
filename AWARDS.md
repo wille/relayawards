@@ -17,8 +17,9 @@
 | ![Exit Probability 1](images/rewards/exit_prob_0.1%25.png) Exit Probability 1 | Over 0.1% mean exit probability fraction
 | ![Exit Probability 2](images/rewards/exit_prob_0.5%25.png) Exit Probability 2 | Over 0.5% mean exit probability fraction
 | ![Exit Probability 3](images/rewards/exit_prob_1%25.png) Exit Probability 3 | Over 1% mean exit probability fraction
-| ![Middle Probability 1](images/rewards/404.png) Middle Probability 1 | Over 0.01% mean middle probability fraction
-| ![Middle Probability 2](images/rewards/404.png) Middle Probability 2 | Over 0.05% mean middle probability fraction
+| ![Middle Probability 1](images/rewards/middle_prob_1.png) Middle Probability 1 | Over 0.1% mean middle probability fraction
+| ![Middle Probability 2](images/rewards/middle_prob_2.png) Middle Probability 2 | Over 0.5% mean middle probability fraction
+| ![Middle Probability 3](images/rewards/middle_prob_3.png) Middle Probability 3 | Over 1% mean middle probability fraction
 | ![Alpha](images/rewards/alpha.png) Alpha | Is running an alpha version of Tor
 | ![Unix](images/rewards/linux.png) Unix | Runs Linux or *BSD 
 | ![IPV6](images/rewards/IPv6.png) IPV6 | IPV6 support in DirAdr or ORAdr
