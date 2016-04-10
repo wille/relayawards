@@ -7,15 +7,15 @@ class Blue_Diamond extends Award {
       }
 
       public function get_icon() {
-            return "blue_diamond.png";
+            return "20_days_uptime.png";
       }
 
       public function get_description() {
-            return "25 days of uptime";
+            return "20 days of uptime";
       }
 
       public function is_granted($relay) {
-            return $relay->get_uptime()["days"] >= 25;
+            return $relay->get_uptime()["days"] >= 20;
       }
 
 }

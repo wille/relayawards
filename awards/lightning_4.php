@@ -7,7 +7,7 @@ class Lightning50 extends Award {
       }
 
       public function get_icon() {
-            return "lightning_1.png";
+            return "25_mb_speed.png";
       }
 
       public function get_description() {
@@ -15,7 +15,7 @@ class Lightning50 extends Award {
       }
 
       public function is_granted($relay) {
-            $mb = pow(1024, 2) * 50;
+            $mb = pow(1024, 2) * 25;
 
             return $relay->bandwidth >= $mb;
       }

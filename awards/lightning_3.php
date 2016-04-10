@@ -7,15 +7,15 @@ class Lightning25 extends Award {
       }
 
       public function get_icon() {
-            return "lightning_1.png";
+            return "15_mb_speed.png";
       }
 
       public function get_description() {
-            return "Over 25 MB/s in bandwidth";
+            return "Over 15 MB/s in bandwidth";
       }
 
       public function is_granted($relay) {
-            $mb = pow(1024, 2) * 25;
+            $mb = pow(1024, 2) * 15;
 
             return $relay->bandwidth >= $mb;
       }
