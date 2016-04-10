@@ -7,7 +7,7 @@ class Ipv6 extends Award {
       }
 
       public function get_icon() {
-            return "";
+            return "IPv6.png";
       }
 
       public function get_description() {
