@@ -21,6 +21,7 @@ include_once "lightning_1.php";
 include_once "lightning_2.php";
 include_once "lightning_3.php";
 include_once "lightning_4.php";
+include_once "lightning_5.php";
 
 include_once "https_lover.php";
 include_once "exotic.php";
@@ -37,6 +38,7 @@ include_once "middle_probability_2.php";
 include_once "unix.php";
 include_once "guard.php";
 include_once "alpha.php";
+include_once "ipv6.php";
 
 $awards = [
       new Red_Diamond(), new Blue_Diamond(),
@@ -48,7 +50,8 @@ $awards = [
       new Exotic(),
       new Unix(),
       new Guard(),
-      new Alpha()
+      new Alpha(),
+      new Ipv6()
 ];
 
 if (isset($_GET["award"])) {
