@@ -1,6 +1,10 @@
-# relayrewards
+# relayawards
 
-Reward/Award system for onion relays
+Award system for Tor relays! 
+
+## Credits
+chloe - https://keybase.io/dotchloe
+Contact: chloe [at] chloe [dot] re
 
 ## Awards
 
