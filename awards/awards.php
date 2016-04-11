@@ -42,7 +42,7 @@ include_once "ipv6.php";
 
 $awards = [
       new Red_Diamond(), new Blue_Diamond(),
-      new Lightning5(), new Lightning10(), new Lightning25(), new Lightning50(),
+      new Lightning5(), new Lightning10(), new Lightning15(), new Lightning25(), new Lightning50(),
       new Https_Lover(),
       new ConsensusWeight1(), new ConsensusWeight2(),
       new ExitProbability1(), new ExitProbability2(),
