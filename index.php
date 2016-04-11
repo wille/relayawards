@@ -19,7 +19,7 @@ require_once "inc/utils.php";
 <?php
 
 require_once "relays.php";
-require_once "awards/awards.php";
+require_once "awards/award.php";
 
 $relays = Relays::query_relays(htmlspecialchars($_GET["s"]));
 
