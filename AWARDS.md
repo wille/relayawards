@@ -20,10 +20,10 @@
 | ![Lightning 25](images/rewards/25_mb_speed.png) Lightning 25 | 25 MB/s or more in bandwidth speed
 | ![Lightning 50](images/rewards/50_mb_speed.png) Lightning 50 | 50 MB/s or more in bandwidth speed
 | ![Lightning 75](images/rewards/king.png) Lightning 75 | 75 MB/s or more in bandwidth speed
-| ![Guard Probability 1](images/rewards/guard_prob_1.png) Consensus Weight 1 | Over 0.1% mean guard probability fraction
-| ![Guard Probability 2](images/rewards/guard_prob_2.png) Consensus Weight 2 | Over 0.5% mean guard probability fraction
-| ![Guard Probability 3](images/rewards/guard_prob_3.png) Consensus Weight 3 | Over 1% mean guard probability fraction
-| ![Guard Probability 4](images/rewards/king.png) Consensus Weight 4 | Over 2% mean guard probability fraction
+| ![Guard Probability 1](images/rewards/guard_prob_1.png) Guard Probability 1   | Over 0.1% mean guard probability fraction
+| ![Guard Probability 2](images/rewards/guard_prob_2.png) Guard Probability 2 | Over 0.5% mean guard probability fraction
+| ![Guard Probability 3](images/rewards/guard_prob_3.png) Guard Probability 3 | Over 1% mean guard probability fraction
+| ![Guard Probability 4](images/rewards/king.png) Guard Probability 4 | Over 2% mean guard probability fraction
 | ![Exit Probability 1](images/rewards/exit_prob_1.png) Exit Probability 1 | Over 0.1% mean exit probability fraction
 | ![Exit Probability 2](images/rewards/exit_prob_2.png) Exit Probability 2 | Over 0.5% mean exit probability fraction
 | ![Exit Probability 3](images/rewards/exit_prob_3.png) Exit Probability 3 | Over 1% mean exit probability fraction
