@@ -1,21 +1,21 @@
 <?php
 
-class Red_Diamond extends Award {
+class Uptime150 extends Award {
 
       public function get_name() {
-            return "Red Diamond";
+            return "Uptime 4";
       }
 
       public function get_icon() {
-            return "red_diamond.png";
+            return "150_days_uptime.png";
       }
 
       public function get_description() {
-            return "10 days of uptime";
+            return "150 days of uptime";
       }
 
       public function is_granted($relay) {
-            return $relay->get_uptime()["days"] >= 10;
+            return $relay->get_uptime()["days"] >= 150;
       }
 
 }

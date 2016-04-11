@@ -1,21 +1,21 @@
 <?php
 
-class Contact extends Award {
+class Uptime10 extends Award {
 
       public function get_name() {
-            return "Contact";
+            return "Uptime 1";
       }
 
       public function get_icon() {
-            return "contact.png";
+            return "10_days_uptime.png";
       }
 
       public function get_description() {
-            return "Has an email address or BTC address in contact information";
+            return "10 days of uptime";
       }
 
       public function is_granted($relay) {
-            return false;
+            return $relay->get_uptime()["days"] >= 10;
       }
 
 }

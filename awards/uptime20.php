@@ -1,9 +1,9 @@
 <?php
 
-class Blue_Diamond extends Award {
+class Uptime20 extends Award {
 
       public function get_name() {
-            return "Blue Diamond";
+            return "Uptime 2";
       }
 
       public function get_icon() {
