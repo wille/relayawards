@@ -1,6 +1,6 @@
 # [relayawards](https://relayawards.com)
 
-Award system for Tor relays Official site: [relayawards.com](https://relayawards.com)
+Award system for Tor relays
 
 ![logo](images/static/relayawards_logo.png)
 
