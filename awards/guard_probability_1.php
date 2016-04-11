@@ -1,5 +1,6 @@
 <?php
 class GuardProbability1 extends Award {
+      
       public function get_name() {
             return "Guard Probability 1";
       }

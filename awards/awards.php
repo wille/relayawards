@@ -13,7 +13,6 @@ abstract class Award {
 
 }
 include_once "unix.php";
-include_once "guard.php";
 include_once "alpha.php";
 include_once "https_lover.php";
 include_once "exotic.php";
@@ -48,6 +47,11 @@ include_once "middle_probability_2.php";
 include_once "middle_probability_3.php";
 include_once "middle_probability_4.php";
 
+include_once "guard_probability_1.php";
+include_once "guard_probability_2.php";
+include_once "guard_probability_3.php";
+include_once "guard_probability_4.php";
+
 include_once "ipv6.php";
 
 $awards = [
@@ -57,9 +61,9 @@ $awards = [
       new ConsensusWeight1(), new ConsensusWeight2(),
       new ExitProbability1(), new ExitProbability2(), new ExitProbability3(), new ExitProbability4(),
       new MiddleProbability1(), new MiddleProbability2(), new MiddleProbability3(), new MiddleProbability4(),
+      new ExitProbability1(), new ExitProbability2(), new ExitProbability3(), new ExitProbability4(),
       new Exotic(),
       new Unix(),
-      new Guard(),
       new Alpha(),
       new Ipv6()
 ];
