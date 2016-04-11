@@ -8,12 +8,12 @@
 | ![Contact](images/rewards/contact.png) Contact | Has an email address or BTC address in contact information
 | ![IPV6](images/rewards/IPv6.png) IPV6 | IPV6 support in DirAdr or ORAdr
 | ![HTTPS Lover](images/rewards/https_lover.png) HTTPS Lover | Uses port 80 or 443 in DirPort or ORPort
-| ![Uptime 10](images/rewards/10_days_uptime.png) - Uptime 10 | 10 or more days of uptime
-| ![Uptime 20](images/rewards/20_days_uptime.png) - Uptime 20 | 20 or more days of uptime
-| ![Uptime 50](images/rewards/50_days_uptime.png) - Uptime 50 | 50 or more days of uptime
-| ![Uptime 150](images/rewards/150_days_uptime.png) - Uptime 150 | 150 or more days of uptime
-| ![Uptime 1Y](images/rewards/1_year_uptime.png) - Uptime 1Y | 1 year of uptime
-| ![Uptime 2Y](images/rewards/king.png) - Uptime 2Y | 2 years of uptime
+| ![Uptime 10](images/rewards/10_days_uptime.png) Uptime 10 | 10 or more days of uptime
+| ![Uptime 20](images/rewards/20_days_uptime.png) Uptime 20 | 20 or more days of uptime
+| ![Uptime 50](images/rewards/50_days_uptime.png) Uptime 50 | 50 or more days of uptime
+| ![Uptime 150](images/rewards/150_days_uptime.png) Uptime 150 | 150 or more days of uptime
+| ![Uptime 1Y](images/rewards/1_year_uptime.png) Uptime 1Y | 1 year of uptime
+| ![Uptime 2Y](images/rewards/king.png) Uptime 2Y | 2 years of uptime
 | ![Lightning 1](images/rewards/5_mb_speed.png) Lightning 5 | 5 MB/s or more in bandwidth speed
 | ![Lightning 10](images/rewards/10_mb_speed.png) Lightning 10 | 10 MB/s or more in bandwidth speed
 | ![Lightning 15](images/rewards/15_mb_speed.png) Lightning 15 | 15 MB/s or more in bandwidth speed
