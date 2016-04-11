@@ -7,19 +7,19 @@
 | ![Unix](images/rewards/linux.png) Unix | Runs Linux or *BSD 
 | ![Contact](images/rewards/contact.png) Contact | Has an email address or BTC address in contact information
 | ![IPV6](images/rewards/IPv6.png) IPV6 | IPV6 support in DirAdr or ORAdr
-| ![Red Diamond](images/rewards/10_days_uptime.png) - | 10 or more days of uptime
-| ![Blue Diamond](images/rewards/20_days_uptime.png) - | 20 or more days of uptime
-| ![Blue Diamond](images/rewards/50_days_uptime.png) - | 50 or more days of uptime
-| ![Blue Diamond](images/rewards/150_days_uptime.png) - | 150 or more days of uptime
-| ![Blue Diamond](images/rewards/1_year_uptime.png) - | 1 year of uptime
-| ![Blue Diamond](images/rewards/king.png) - | 2 years of uptime
+| ![HTTPS Lover](images/rewards/https_lover.png) HTTPS Lover | Uses port 80 or 443 in DirPort or ORPort
+| ![Uptime 10](images/rewards/10_days_uptime.png) - Uptime 10 | 10 or more days of uptime
+| ![Uptime 20](images/rewards/20_days_uptime.png) - Uptime 20 | 20 or more days of uptime
+| ![Uptime 50](images/rewards/50_days_uptime.png) - Uptime 50 | 50 or more days of uptime
+| ![Uptime 150](images/rewards/150_days_uptime.png) - Uptime 150 | 150 or more days of uptime
+| ![Uptime 1Y](images/rewards/1_year_uptime.png) - Uptime 1Y | 1 year of uptime
+| ![Uptime 2Y](images/rewards/king.png) - Uptime 2Y | 2 years of uptime
 | ![Lightning 1](images/rewards/5_mb_speed.png) Lightning 5 | 5 MB/s or more in bandwidth speed
 | ![Lightning 10](images/rewards/10_mb_speed.png) Lightning 10 | 10 MB/s or more in bandwidth speed
 | ![Lightning 15](images/rewards/15_mb_speed.png) Lightning 15 | 15 MB/s or more in bandwidth speed
 | ![Lightning 25](images/rewards/25_mb_speed.png) Lightning 25 | 25 MB/s or more in bandwidth speed
 | ![Lightning 50](images/rewards/50_mb_speed.png) Lightning 50 | 50 MB/s or more in bandwidth speed
 | ![Lightning 75](images/rewards/king.png) Lightning 75 | 75 MB/s or more in bandwidth speed
-| ![HTTPS Lover](images/rewards/https_lover.png) HTTPS Lover | Uses port 80 or 443 in DirPort or ORPort
 | ![Guard Probability 1](images/rewards/guard_prob_1.png) Consensus Weight 1 | Over 0.1% mean guard probability fraction
 | ![Guard Probability 2](images/rewards/guard_prob_2.png) Consensus Weight 2 | Over 0.5% mean guard probability fraction
 | ![Guard Probability 3](images/rewards/guard_prob_3.png) Consensus Weight 3 | Over 1% mean guard probability fraction
