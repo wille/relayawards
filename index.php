@@ -3,6 +3,12 @@ require_once "header.php";
 require_once "inc/utils.php";
 ?>
             <div class="container">
+                  <form method="GET">
+                        <div class="form-group">
+                              <input placeholder="Search" class="form-control input-sm" id="inputsm" type="text" name="s">
+                              <input type="submit" value="Search">
+                        </div>
+                  </form>
                     <div class="row">
                           <div class="container">
                                 <table class="table">
