@@ -7,7 +7,6 @@ require_once "inc/utils.php";
                         <div class="form-group">
                               <div class="col-xs-4">
                                     <input placeholder="Search" class="form-control input-sm" id="inputsm" type="text" name="s">
-                                    <input type="submit" value="Search">
                               </div>
                         </div>
                   </form>
