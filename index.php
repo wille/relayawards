@@ -31,6 +31,9 @@ require_once "awards/award.php";
 $relays = Relays::query_relays(htmlspecialchars($_GET["s"]), false);
 
 foreach ($relays as $relay) {
+      if (!$relay->is_running()) {
+            continue;
+      }
       echo "<tr>";
       echo '<td><a href="relay.php?fp=' . $relay->fingerprint . '">' . $relay->nick . "</a></td>";
 
