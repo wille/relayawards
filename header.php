@@ -27,10 +27,8 @@
 
                   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                       <ul class="nav navbar-nav">
-                          <li>
-                              <a href="index.php">Index</a>
-                              <a href="awards.php">Awards</a>
-                          </li>
+                          <li><a href="index.php">Index</a></li>
+                          <li><a href="awards.php">Awards</a></li>
                       </ul>
                   </div>
               </div>
