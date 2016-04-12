@@ -28,7 +28,7 @@ require_once "inc/utils.php";
 require_once "relays.php";
 require_once "awards/award.php";
 
-$relays = Relays::query_relays(htmlspecialchars($_GET["s"]));
+$relays = Relays::query_relays(htmlspecialchars($_GET["s"]), true);
 
 foreach ($relays as $relay) {
       echo "<tr>";
