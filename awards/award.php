@@ -11,6 +11,10 @@ abstract class Award {
       public abstract function get_description();
       public abstract function is_granted($relay);
 
+      public function get_points() {
+            return 0;
+      }
+
 }
 include_once "unix.php";
 include_once "alpha.php";
