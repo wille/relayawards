@@ -2,7 +2,7 @@
 require_once "header.php";
 require_once "relays.php";
 require_once "inc/utils.php";
-require_once "awards/award.php";
+require_once "awards/awards.php";
 ?>
 
 <?php

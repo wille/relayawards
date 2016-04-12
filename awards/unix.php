@@ -14,6 +14,11 @@ class Unix extends Award {
             return "Runs Linux or *BSD";
       }
 
+      public function get_points() {
+            return "1";
+      }
+
+
       public function is_granted($relay) {
             $p = $relay->platform;
             return strpos($p, "Linux") !== false || strpos($p, "FreeBSD") !== false;
