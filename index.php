@@ -28,39 +28,49 @@ require_once "inc/utils.php";
 require_once "relays.php";
 require_once "awards/award.php";
 
-$relays = Relays::query_relays(htmlspecialchars($_GET["s"]), false);
+const MIN_SEARCH = 2;
+const MAX_SEARCH = 25;
 
-foreach ($relays as $relay) {
-      if (!$relay->is_running()) {
-            continue;
-      }
-      echo "<tr>";
-      echo '<td><a href="relay.php?fp=' . $relay->fingerprint . '">' . $relay->nick . "</a></td>";
+$search = $_GET["s"];
+$can_search = isset($search) && strlen($search) >= MIN_SEARCH && strlen($search) <= MAX_SEARCH;
 
-      echo "<td>" . format_uptime($relay) . "</td>";
+if ($can_search) {
+      $relays = Relays::query_relays(htmlspecialchars($search), false);
 
-      echo "<td>" . $relay->get_current_bandwidth() . "</td>";
-      echo '<td><img src="images/flags/'. $relay->country . '.png"></td>';
-
-      $granted = array();
-
-      foreach ($awards as $award) {
-            if ($award->is_granted($relay)) {
-                  $granted[] = $award;
+      foreach ($relays as $relay) {
+            if (!$relay->is_running()) {
+                  continue;
             }
-      }
+            echo "<tr>";
+            echo '<td><a href="relay.php?fp=' . $relay->fingerprint . '">' . $relay->nick . "</a></td>";
 
-      $has_awards = count($granted) > 0;
+            echo "<td>" . format_uptime($relay) . "</td>";
 
-      if ($has_awards) {
-            echo "<td>";
-            foreach ($granted as $award) {
-                  echo '<a href="awards/awards.php?award=' . urlencode($award->get_name()) . '"><img src="images/rewards/' . $award->get_icon() . '" alt="' . $award->get_name() . '" width=32px height=32px></a>';
+            echo "<td>" . $relay->get_current_bandwidth() . "</td>";
+            echo '<td><img src="images/flags/'. $relay->country . '.png"></td>';
+
+            $granted = array();
+
+            foreach ($awards as $award) {
+                  if ($award->is_granted($relay)) {
+                        $granted[] = $award;
+                  }
             }
-            echo "</td>";
-      }
 
-      echo "</tr>";
+            $has_awards = count($granted) > 0;
+
+            if ($has_awards) {
+                  echo "<td>";
+                  foreach ($granted as $award) {
+                        echo '<a href="awards/awards.php?award=' . urlencode($award->get_name()) . '"><img src="images/rewards/' . $award->get_icon() . '" alt="' . $award->get_name() . '" width=32px height=32px></a>';
+                  }
+                  echo "</td>";
+            }
+
+            echo "</tr>";
+      }
+} else {
+      echo "Minimum search is " . MIN_SEARCH . ", maximum is " . MAX_SEARCH;
 }
 
 ?>
