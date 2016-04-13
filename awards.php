@@ -1,6 +1,6 @@
 <?php
 require_once "header.php";
-require_once "awards/awards.php";
+require_once "awards/award.php";
 
 ?>
 	<title>RelayAwards - Awards</title>
