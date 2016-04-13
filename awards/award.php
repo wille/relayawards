@@ -28,6 +28,7 @@ include_once "uptime150.php";
 include_once "uptime1y.php";
 include_once "uptime2y.php";
 
+include_once "lightning_0.php";
 include_once "lightning_1.php";
 include_once "lightning_2.php";
 include_once "lightning_3.php";
@@ -46,6 +47,7 @@ include_once "exit_probability_2.php";
 include_once "exit_probability_3.php";
 include_once "exit_probability_4.php";
 
+include_once "middle_probability_0.php";
 include_once "middle_probability_1.php";
 include_once "middle_probability_2.php";
 include_once "middle_probability_3.php";
