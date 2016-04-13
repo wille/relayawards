@@ -1,6 +1,6 @@
 <?php
 
-class Lightning0 extends Award {
+class Lightning1 extends Award {
 
       public function get_name() {
             return "Lightning";

@@ -62,11 +62,11 @@ include_once "ipv6.php";
 
 $awards = [
       new Uptime10(), new Uptime20(), new Uptime50(), new Uptime150(), new Uptime1y(), new Uptime2y(),
-      new Lightning5(), new Lightning10(), new Lightning15(), new Lightning25(), new Lightning50(),
+      new Lightning1(), new Lightning5(), new Lightning10(), new Lightning15(), new Lightning25(), new Lightning50(),
       new Https_Lover(),
       new ConsensusWeight1(), new ConsensusWeight2(),
       new ExitProbability1(), new ExitProbability2(), new ExitProbability3(), new ExitProbability4(),
-      new MiddleProbability1(), new MiddleProbability2(), new MiddleProbability3(), new MiddleProbability4(),
+      new MiddleProbability0(), new MiddleProbability1(), new MiddleProbability2(), new MiddleProbability3(), new MiddleProbability4(),
       new ExitProbability1(), new ExitProbability2(), new ExitProbability3(), new ExitProbability4(),
       new Exotic(),
       new Unix(),
