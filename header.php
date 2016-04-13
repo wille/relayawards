@@ -33,7 +33,7 @@
                               <a href="awards.php">Awards</a>
                           </li>
                            <li>
-                              <a href="info.php">Information</a>
+                              <a href="about.php">About</a>
                           </li>
 
                         <li>
