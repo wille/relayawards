@@ -59,15 +59,14 @@ if ($can_search) {
 
             $has_awards = count($granted) > 0;
 
+            echo "<td>";
             if ($has_awards) {
-                  echo "<td>";
                   foreach ($granted as $award) {
                         echo '<a href="awards/awards.php?award=' . urlencode($award->get_name()) . '"><img src="images/rewards/' . $award->get_icon() . '" alt="' . $award->get_name() . '" width=32px height=32px></a>';
                   }
-                  echo "</td>";
             }
 
-            echo "</tr>";
+            echo "</td></tr>";
       }
 } else {
       echo "Minimum search is " . MIN_SEARCH . ", maximum is " . MAX_SEARCH;
