@@ -15,7 +15,7 @@ class Unix extends Award {
       }
 
       public function get_points() {
-            return "1";
+            return 1;
       }
 
 

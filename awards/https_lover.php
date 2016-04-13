@@ -28,6 +28,10 @@ class Https_Lover extends Award {
             return $this->is_correct_port($relay->dir_address);
       }
 
+      public function get_points() {
+            return 2;
+      }
+
 }
 
 ?>
