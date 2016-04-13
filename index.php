@@ -15,6 +15,7 @@ require_once "inc/utils.php";
                                 <table class="table">
                                       <thead>
                                           <tr>
+                                                <th>Points</th>
                                                 <th>Nickname</th>
                                                 <th>Uptime</th>
                                                 <th>Bandwidth</th>
@@ -37,11 +38,23 @@ $can_search = isset($search) && strlen($search) >= MIN_SEARCH && strlen($search)
 if ($can_search) {
       $relays = Relays::query_relays(htmlspecialchars($search), false);
 
-      foreach ($relays as $relay) {
-            if (!$relay->is_running()) {
-                  continue;
+      function compare_points($a, $b) {
+            $p = get_points($a);
+            $p1 = get_points($b);
+
+            if ($p == $p1) {
+                  return 0;
             }
+
+            return ($p > $p1) ? -1 : 1;
+      }
+
+      usort($relays, "compare_points");
+
+      for ($i = 0; $i < count($relays); $i++) {
+            $relay = $relays[$i];
             echo "<tr>";
+            echo "<td>" . get_points($relay) . "</td>";
             echo '<td><a href="relay.php?fp=' . $relay->fingerprint . '">' . $relay->nick . "</a></td>";
 
             echo "<td>" . format_uptime($relay) . "</td>";

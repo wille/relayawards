@@ -1,5 +1,20 @@
 <?php
 
+include_once "awards/award.php";
+include_once "relays.php";
+
+function get_points(&$relay) {
+      $points = 0;
+      global $awards;
+      foreach ($awards as $award) {
+            if ($award->is_granted($relay)) {
+                  $points += $award->get_points();
+            }
+      }
+
+      return $points;
+}
+
 function get_os_icon($relay) {
       $p = $relay->platform;
 
