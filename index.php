@@ -15,7 +15,7 @@ require_once "inc/utils.php";
                                 <table class="table">
                                       <thead>
                                           <tr>
-                                                <th>Points</th>
+                                                <th>Rank</th>
                                                 <th>Nickname</th>
                                                 <th>Uptime</th>
                                                 <th>Bandwidth</th>
@@ -53,8 +53,9 @@ if ($can_search) {
 
       for ($i = 0; $i < count($relays); $i++) {
             $relay = $relays[$i];
+
             echo "<tr>";
-            echo "<td>" . get_points($relay) . "</td>";
+            echo "<td>" . ($i == 0 ? '<i class="fa fa-trophy"></i>' : ($i + 1)) . "</td>";
             echo '<td><a href="relay.php?fp=' . $relay->fingerprint . '">' . $relay->nick . "</a></td>";
 
             echo "<td>" . format_uptime($relay) . "</td>";
