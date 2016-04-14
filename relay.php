@@ -37,7 +37,7 @@ $relay = $relays[0];
 
                   if ($has_awards) {
                         foreach ($granted as $award) {
-                              echo '<a href="awards/award.php?award=' . urlencode($award->get_name()) . '"><img src="images/rewards/' . $award->get_icon() . '" alt="' . $award->get_name() . '" width=62px height=62px></a>';
+                              echo '<a href="awards/award.php?award=' . urlencode($award->get_name()) . '"><img src="images/rewards/' . $award->get_icon() . '" title="' . $award->get_description() . '" alt="' . $award->get_name() . '" width=62px height=62px></a>';
                         }
                   }
                   ?>
