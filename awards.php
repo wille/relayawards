@@ -1,7 +1,7 @@
 <?php
 require_once "header.php";
 require_once "awards/award.php";
-
+echo '<title>' . $awards_title  . '</title>';
 ?>
         <title>RelayAwards - Awards</title>
             <div class="container">
