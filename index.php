@@ -1,16 +1,21 @@
 <?php
 require_once "header.php";
 require_once "inc/utils.php";
-?>
-            <div class="container">
-                  <form method="GET">
-                        <div class="form-group">
-                              <div class="col-xs-4">
-                                    <input placeholder="Search" class="form-control input-sm" id="inputsm" type="text" name="s">
-                              </div>
-                        </div>
-                  </form>
-                    <div class="row">
+
+if(empty($_GET['s'])) {
+        echo '<center><h1>Welcome to RelayAwards <i class="fa fa-trophy" aria-hidden="true"></i></h1><p>
+                        RelayAwards is a competition for Tor-relay operators! Compete against your friends, your family or why not yourself?</br>
+                        There are many awards to win. Some are easy, others are hard and some are <b>very</b> hard.</br>
+                        Make sure to read about the different <a href="/awards.php">awards</a> that you can win and how everything <a href="/about.php">works</a>. Good luck!
+                        <div class="box"> <center><form action="?" method="get">
+                        <div class="container-4">
+                        <input type="search" id="search" name="s" placeholder="Search..." />
+                        <button class="icon"><i class="fa fa-search"></i></button>
+                </center></form>
+        </div>
+</div>';
+} else {
+                    echo '<div class="row">
                           <div class="container">
                                 <table class="table">
                                       <thead>
@@ -23,7 +28,10 @@ require_once "inc/utils.php";
                                                 <th>Awards</th>
                                           </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody>';
+}
+?>
+
 <?php
 
 require_once "relays.php";
