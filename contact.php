@@ -1,5 +1,6 @@
 <?php
 require_once "header.php";
+echo '<title>' . $contact_title  . '</title>';
 ?>
 <center><h2>Contact</h2></br>
 <img src="images/static/chloe.png">
