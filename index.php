@@ -10,7 +10,7 @@ if(empty($_GET['s'])) {
                         Make sure to read about the different <a href="/awards.php">awards</a> that you can win and how everything <a href="/about.php">works</a>. Good luck!
                         <div class="box"> <center><form action="?" method="get">
                         <div class="container-4">
-                        <input type="search" id="search" name="s" placeholder="Search..." />
+                        <input type="search" id="search" name="s" placeholder="Search..." autofocus />
                         <button class="icon"><i class="fa fa-search"></i></button>
                 </center></form>
         </div>
