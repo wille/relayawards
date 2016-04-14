@@ -3,7 +3,7 @@ require_once "header.php";
 require_once "inc/utils.php";
 
 if(empty($_GET['s'])) {
-        echo '<center><h1>Welcome to RelayAwards <i class="fa fa-trophy" aria-hidden="true"></i></h1><p>
+        echo '<title>' . $index_title . '</title><center><h1>Welcome to RelayAwards <i class="fa fa-trophy" aria-hidden="true"></i></h1><p>
                         RelayAwards is a competition for Tor-relay operators! Compete against your friends, your family or why not yourself?</br>
                         There are many awards to win. Some are easy, others are hard and some are <b>very</b> hard.</br>
                         Make sure to read about the different <a href="/awards.php">awards</a> that you can win and how everything <a href="/about.php">works</a>. Good luck!
