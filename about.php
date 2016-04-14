@@ -1,5 +1,6 @@
 <?php
 require_once "header.php";
+echo '<title>' . $about_title  . '</title>';
 ?>
 
 <center><h1>Information about RelayAwards</h1></br>
