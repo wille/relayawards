@@ -42,16 +42,9 @@ include_once "exotic.php";
 include_once "consensus_weight_1.php";
 include_once "consensus_weight_2.php";
 
-include_once "exit_probability_1.php";
-include_once "exit_probability_2.php";
-include_once "exit_probability_3.php";
-include_once "exit_probability_4.php";
+include_once "exit_probability.php";
 
-include_once "middle_probability_0.php";
-include_once "middle_probability_1.php";
-include_once "middle_probability_2.php";
-include_once "middle_probability_3.php";
-include_once "middle_probability_4.php";
+include_once "middle_probability.php";
 
 include_once "guard_probability_1.php";
 include_once "guard_probability_2.php";
@@ -65,8 +58,8 @@ $awards = [
       new Lightning1(), new Lightning5(), new Lightning10(), new Lightning15(), new Lightning25(), new Lightning50(),
       new Https_Lover(),
       new ConsensusWeight1(), new ConsensusWeight2(),
-      new ExitProbability1(), new ExitProbability2(), new ExitProbability3(), new ExitProbability4(),
-      new MiddleProbability0(), new MiddleProbability1(), new MiddleProbability2(), new MiddleProbability3(), new MiddleProbability4(),
+      new ExitProbability1(), new ExitProbability2(), new ExitProbability3(), new ExitProbability4(), new ExitProbability5(), new ExitProbability6(),
+      new MiddleProbability1(), new MiddleProbability2(), new MiddleProbability3(), new MiddleProbability4(), new MiddleProbability5(), new MiddleProbability6(),
       new ExitProbability1(), new ExitProbability2(), new ExitProbability3(), new ExitProbability4(),
       new Exotic(),
       new Unix(),
