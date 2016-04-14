@@ -52,7 +52,7 @@ $relay = $relays[0];
                   <p><?php echo $relay->platform; ?></p>
 
                   <h4>Country</h4>
-                  <p><?php echo $relay->country_name; ?></td>
+                  <p><td><img src="images/flags/<?php echo $relay->country; ?>.png"><?php echo $relay->country_name; ?></td>
 
             </center>
       </body>
