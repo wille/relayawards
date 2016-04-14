@@ -76,7 +76,7 @@ if ($can_search) {
             echo "<td>";
             if ($has_awards) {
                   foreach ($granted as $award) {
-                        echo '<a href="awards/awards.php?award=' . urlencode($award->get_name()) . '"><img src="images/rewards/' . $award->get_icon() . '" alt="' . $award->get_name() . '" width=32px height=32px></a>';
+                        echo '<a href="awards/awards.php?award=' . urlencode($award->get_name()) . '"><img src="images/rewards/' . $award->get_icon() . '" title="' . $award->get_description() . '" alt="' . $award->get_name() . '" width=32px height=32px></a>';
                   }
             }
 
