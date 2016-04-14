@@ -48,14 +48,11 @@ $relay = $relays[0];
                   <h4>Uptime</h4>
                   <p><?php echo format_uptime($relay); ?></p>
 
-                  <h4>Running</h4>
-                  <p><font color="<?php echo $relay->running ? "00ff00" : "ff0000"; ?>"><?php echo $relay->running ? "Running" : "Not running"; ?></font></p>
-
                   <h4>Platform</h4>
-                  <p><img src="images/os/<?php echo get_os_icon($relay); ?>.png"><?php echo $relay->platform; ?></p>
+                  <p><?php echo $relay->platform; ?></p>
 
                   <h4>Country</h4>
-                  <p><td><img src="images/flags/<?php echo $relay->country; ?>.png"><?php echo $relay->country_name; ?></td>
+                  <p><?php echo $relay->country_name; ?></td>
 
             </center>
       </body>
