@@ -1,3 +1,10 @@
+<?php
+$index_title = "RelayAwards - competition for Tor-relay operators!";
+$awards_title = "Awards - RelayAwards";
+$contact_title = "Contact - RelayAwards";
+$about_title = "Information - RelayAwards";
+?>
+
 <html>
 
 <head>
