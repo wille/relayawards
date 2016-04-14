@@ -18,6 +18,9 @@ class Uptime150 extends Award {
             return $relay->get_uptime()["days"] >= 150;
       }
 
+      public function get_points() {
+            return 4;
+      }
 }
 
 ?>

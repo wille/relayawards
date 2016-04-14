@@ -24,6 +24,9 @@ class Exotic extends Award {
             return in_array($relay->country, $exotic_countries);
       }
 
+      public function get_points() {
+            return 5;
+      }
 }
 
 ?>

@@ -18,7 +18,6 @@ class Unix extends Award {
             return 1;
       }
 
-
       public function is_granted($relay) {
             $p = $relay->platform;
             return strpos($p, "Linux") !== false || strpos($p, "FreeBSD") !== false;

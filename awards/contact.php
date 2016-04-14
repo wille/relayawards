@@ -18,6 +18,9 @@ class Contact extends Award {
             return false;
       }
 
+      public function get_points() {
+            return 2;
+      }
 }
 
 ?>

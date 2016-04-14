@@ -18,6 +18,9 @@ class Alpha extends Award {
             return strpos($relay->platform, "Alpha") !== false;
       }
 
+      public function get_points() {
+            return 1;
+      }
 }
 
 ?>

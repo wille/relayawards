@@ -22,9 +22,11 @@ class Ipv6 extends Award {
             }
 
             return filter_var($relay->dir_address, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6);
-;
       }
 
+      public function get_points() {
+            return 2;
+      }
 }
 
 ?>

@@ -15,8 +15,12 @@ class Lightning50 extends Award {
 
       public function is_granted($relay) {
             $mb = pow(1024, 2) * 50;
-            
+
             return $relay->bandwidth >= $mb;
+      }
+
+      public function get_points() {
+            return 10;
       }
 }
 ?>

@@ -20,6 +20,9 @@ class Lightning1 extends Award {
             return $relay->bandwidth >= $mb;
       }
 
+      public function get_points() {
+            return 1;
+      }
 }
 
 ?>
