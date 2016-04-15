@@ -9,7 +9,7 @@ abstract class Lightning extends AbstractLevelAward {
       }
 
       public function get_icon() {
-            return $king ? "king.png" : "speed_" . $this->level . ".png";
+            return "speed_" . $this->level . ".png";
       }
 
       public function get_description() {
@@ -61,7 +61,7 @@ class Lightning5 extends Lightning {
 class Lightning6 extends Lightning {
 
       public function __construct() {
-            parent::__construct(6, 50, 30, true);
+            parent::__construct(6, 50, 30);
       }
 }
 
