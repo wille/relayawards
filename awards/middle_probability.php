@@ -9,7 +9,7 @@ abstract class MiddleProbability extends AbstractLevelAward {
       }
 
       public function get_icon() {
-            return $king ? "king.png" : "middle_prob_" . $this->level . ".png";
+            return $this->king ? "king.png" : "middle_prob_" . $this->level . ".png";
       }
 
       public function get_description() {

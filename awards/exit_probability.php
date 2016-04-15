@@ -9,7 +9,7 @@ abstract class ExitProbability extends AbstractLevelAward {
       }
 
       public function get_icon() {
-            return $king ? "king.png" : "exit_prob_" . $this->level . ".png";
+            return $this->king ? "king.png" : "exit_prob_" . $this->level . ".png";
       }
 
       public function get_description() {
