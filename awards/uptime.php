@@ -9,7 +9,7 @@ abstract class Uptime extends AbstractLevelAward {
       }
 
       public function get_icon() {
-            return "uptime_" . $this->level . ".png";
+            return $this->king ? "king.png" : "uptime_" . $this->level . ".png";
       }
 
       public function get_description() {
@@ -59,7 +59,7 @@ class Uptime5 extends Uptime {
 class Uptime6 extends Uptime {
 
       public function __construct() {
-            parent::__construct(6, 365, 25, true);
+            parent::__construct(6, 365, 25);
       }
 }
 
