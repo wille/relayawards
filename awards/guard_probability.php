@@ -13,7 +13,7 @@ abstract class GuardProbability extends AbstractLevelAward {
       }
 
       public function get_description() {
-            return "Over " . $this->fraction . " in guard probability";
+            return "Over " . $this->fraction . "% mean guard probability";
       }
 
       public function is_granted($relay) {
