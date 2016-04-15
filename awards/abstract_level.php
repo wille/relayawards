@@ -15,7 +15,7 @@ abstract class AbstractLevelAward extends Award {
       }
 
       public function get_points() {
-            return $points;
+            return $this->points;
       }
 }
 
