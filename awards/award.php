@@ -37,13 +37,8 @@ include_once "consensus_weight_1.php";
 include_once "consensus_weight_2.php";
 
 include_once "exit_probability.php";
-
 include_once "middle_probability.php";
-
-include_once "guard_probability_1.php";
-include_once "guard_probability_2.php";
-include_once "guard_probability_3.php";
-include_once "guard_probability_4.php";
+include_once "guard_probability.php";
 
 include_once "ipv6.php";
 
@@ -54,7 +49,7 @@ $awards = [
       new ConsensusWeight1(), new ConsensusWeight2(),
       new ExitProbability1(), new ExitProbability2(), new ExitProbability3(), new ExitProbability4(), new ExitProbability5(), new ExitProbability6(),
       new MiddleProbability1(), new MiddleProbability2(), new MiddleProbability3(), new MiddleProbability4(), new MiddleProbability5(), new MiddleProbability6(),
-      new ExitProbability1(), new ExitProbability2(), new ExitProbability3(), new ExitProbability4(),
+      new GuardProbability1(), new GuardProbability2(), new GuardProbability3(), new GuardProbability4(), new GuardProbability5(), new GuardProbability5(),
       new Exotic(),
       new Unix(),
       new Alpha(),
