@@ -1,6 +1,7 @@
 <?php
+$title = TITLE_CONTACT;
+
 require_once "header.php";
-echo '<title>' . $contact_title  . '</title>';
 ?>
 <head>
 <meta charset="UTF-8">

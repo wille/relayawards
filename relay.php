@@ -20,6 +20,8 @@ if (count($relays) != 1) {
 
 $relay = $relays[0];
 
+echo "<title>" . $relay->nick . " - RelayAwards</title>";
+
 ?>
             <center>
                   <h4>Rewards</h4>

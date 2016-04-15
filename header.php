@@ -1,8 +1,8 @@
 <?php
-$index_title = "RelayAwards - competition for Tor-relay operators!";
-$awards_title = "Awards - RelayAwards";
-$contact_title = "Contact - RelayAwards";
-$about_title = "Information - RelayAwards";
+const TITLE_INDEX = "RelayAwards - competition for Tor-relay operators!";
+const TITLE_AWARDS = "Awards - RelayAwards";
+const TITLE_CONTACT = "Contact - RelayAwards";
+const TITLE_ABOUT = "Information - RelayAwards";
 ?>
 
 <html>
@@ -12,6 +12,8 @@ $about_title = "Information - RelayAwards";
       <link href="css/bootstrap.min.css" rel="stylesheet">
       <link href='css/roboto.css' rel='stylesheet' type='text/css'>
       <link href="css/font-awesome.min.css" rel="stylesheet">
+
+      <title><?php echo $title; ?></title>
 
       <style>
             body {

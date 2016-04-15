@@ -1,6 +1,7 @@
 <?php
+
+$title = ABOUT_TITLE;
 require_once "header.php";
-echo '<title>' . $about_title  . '</title>';
 ?>
 
 <center><h1>Information about RelayAwards</h1></br>
@@ -43,4 +44,3 @@ RelayAwards uses the <a href="https://onionoo.torproject.org/">onionoo API</a> f
 Relayawards.com does <b><u>NOT</b></u>: Store any information about its visitors, require Javascript or use any other tracking methods such as cookies, third-party content or etags.<p>
 Relayawards.com uses preload-HSTS, CSP and other <a href="https://securityheaders.io/?q=https%3A%2F%2Frelayawards.com">security headers</a>. Certificate is from <a href="https://letsencrypt.org/">Let's Encrypt</a>, see also <a href="https://www.ssllabs.com/ssltest/analyze.html?d=relayawards.com&latest">SSLlabs</a>.
 </br></br></br></br>
-
