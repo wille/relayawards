@@ -14,6 +14,10 @@
                 font-family: 'Roboto', sans-serif;
             }
       </style>
+
+      <meta charset="UTF-8">
+      <meta name="keywords" content="contact,relayawards,intochloe,redpois0n,github,tor,relay,award,awards,questions,email">
+      <meta name="description" content="RelayAwards - A competition for Tor relay operators! - contact the creators. dotchloe and redpois0n">
 </head>
 
       <body>
