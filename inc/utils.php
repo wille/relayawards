@@ -50,7 +50,7 @@ function format_uptime($relay) {
 
 function print_relay_to_table($i, $relay) {
       echo "<tr>";
-      echo "<td>" . ($i == 0 ? '<i class="fa fa-trophy"></i>' : ($i + 1)) . "</td>";
+      echo "<td>" . ($i == 0 ? '<i class="fa fa-trophy"></i>' : ($i + 1)) . " (" . get_points($relay) . ")</td>";
       echo '<td><a href="relay.php?fp=' . $relay->fingerprint . '">' . $relay->nick . "</a></td>";
 
       echo "<td>" . format_uptime($relay) . "</td>";
@@ -79,7 +79,7 @@ function print_relay_to_table($i, $relay) {
       echo "</td></tr>";
 }
 
-function table_relays($relays) {
+function table_relays($relays, $offset = 0, $length = 0) {
       function compare_points($a, $b) {
             $p = get_points($a);
             $p1 = get_points($b);
@@ -90,9 +90,13 @@ function table_relays($relays) {
 
             return ($p > $p1) ? -1 : 1;
       }
-      echo count($relays);
 
       usort($relays, "compare_points");
+
+      if ($offset != 0 || $length != 0) {
+            $relays = array_slice($relays, $offset, $length);
+      }
+
       for ($i = 0; $i < count($relays); $i++) {
             $relay = $relays[$i];
 
