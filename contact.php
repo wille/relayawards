@@ -1,5 +1,5 @@
 <?php
-$title = TITLE_CONTACT;
+$title = "Contact - RelayAwards";
 
 require_once "header.php";
 ?>

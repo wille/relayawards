@@ -1,5 +1,5 @@
 <?php
-$title = TITLE_INDEX;
+$title = "RelayAwards - competition for Tor-relay operators!";
 
 require_once "header.php";
 require_once "inc/utils.php";

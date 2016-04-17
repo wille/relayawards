@@ -1,10 +1,3 @@
-<?php
-const TITLE_INDEX = "RelayAwards - competition for Tor-relay operators!";
-const TITLE_AWARDS = "Awards - RelayAwards";
-const TITLE_CONTACT = "Contact - RelayAwards";
-const TITLE_ABOUT = "Information - RelayAwards";
-?>
-
 <html>
 
 <head>

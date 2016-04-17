@@ -1,5 +1,5 @@
 <?php
-$title = TITLE_AWARDS;
+$title = "List of Awards - RelayAwards";
 
 require_once "header.php";
 require_once "awards/award.php";

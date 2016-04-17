@@ -1,6 +1,6 @@
 <?php
 
-$title = ABOUT_TITLE;
+$title = "About - RelayAwards";
 require_once "header.php";
 ?>
 
