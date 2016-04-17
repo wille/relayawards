@@ -5,15 +5,9 @@
       <link href="css/bootstrap.min.css" rel="stylesheet">
       <link href='css/roboto.css' rel='stylesheet' type='text/css'>
       <link href="css/font-awesome.min.css" rel="stylesheet">
+      <link href='css/stylesheet.css' rel='stylesheet' type='text/css'>
 
       <title><?php echo $title; ?></title>
-
-      <style>
-            body {
-                  padding-top: 70px;
-                font-family: 'Roboto', sans-serif;
-            }
-      </style>
 
       <meta charset="UTF-8">
       <meta name="keywords" content="contact,relayawards,intochloe,redpois0n,github,tor,relay,award,awards,questions,email">
