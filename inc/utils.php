@@ -1,7 +1,7 @@
 <?php
 
-include_once "awards/award.php";
-include_once "relays.php";
+require_once "awards/award.php";
+require_once "relays.php";
 
 function get_points(&$relay) {
       $points = 0;
@@ -42,9 +42,55 @@ function format_uptime($relay) {
       return $uptime;
 }
 
+function print_relay_to_table($i, $relay) {
+      echo "<tr>";
+      echo "<td>" . ($i == 0 ? '<i class="fa fa-trophy"></i>' : ($i + 1)) . "</td>";
+      echo '<td><a href="relay.php?fp=' . $relay->fingerprint . '">' . $relay->nick . "</a></td>";
 
+      echo "<td>" . format_uptime($relay) . "</td>";
 
+      echo "<td>" . $relay->get_current_bandwidth() . "</td>";
+      echo '<td><img src="images/flags/'. $relay->country . '.png"></td>';
 
+      $granted = array();
 
+      global $awards;
+      foreach ($awards as $award) {
+            if ($award->is_granted($relay)) {
+                  $granted[] = $award;
+            }
+      }
 
+      $has_awards = count($granted) > 0;
+
+      echo "<td>";
+      if ($has_awards) {
+            foreach ($granted as $award) {
+                  echo '<a href="awards/award.php?award=' . urlencode($award->get_name()) . '"><img src="images/rewards/' . $award->get_icon() . '" title="' . $award->get_description() . '" alt="' . $award->get_name() . '" width=32px height=32px></a>';
+            }
+      }
+
+      echo "</td></tr>";
+}
+
+function table_relays($relays) {
+      function compare_points($a, $b) {
+            $p = get_points($a);
+            $p1 = get_points($b);
+
+            if ($p == $p1) {
+                  return 0;
+            }
+
+            return ($p > $p1) ? -1 : 1;
+      }
+
+      usort($relays, "compare_points");
+
+      for ($i = 0; $i < count($relays); $i++) {
+            $relay = $relays[$i];
+
+            print_relay_to_table($i, $relay);
+      }
+}
 ?>
