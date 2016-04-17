@@ -6,11 +6,11 @@ require_once "inc/utils.php";
 
 if(empty($_GET['s'])) {
         echo '<head><meta charset="UTF-8"><meta name="keywords" content="relayawards,tor,competition,relayawards.com,index,start,relay,node,compete,operators,win"><meta name="description" content="RelayAwards - A competition for Tor relay operators! - Welcome! | Index"></head>
-                        <link href="/css/search.css" rel="stylesheet">
+                        <link href="css/search.css" rel="stylesheet">
                         <center><h1>Welcome to RelayAwards <i class="fa fa-trophy" aria-hidden="true"></i></h1><p>
                         RelayAwards is a competition for Tor-relay operators! Compete against your friends, your family or why not yourself?</br>
                         There are many awards to win. Some are easy, others are hard and some are <b>very</b> hard.</br>
-                        Make sure to read about the different <a href="/awards.php">awards</a> that you can win and how everything <a href="/about.php">works</a>. Good luck!
+                        Make sure to read about the different <a href="awards.php">awards</a> that you can win and how everything <a href="about.php">works</a>. Good luck!
                         <div class="box"> <center><form action="?" method="get">
                         <div class="container-4">
                         <input type="search" id="search" name="s" placeholder="Search..." autofocus />
