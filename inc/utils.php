@@ -4,6 +4,10 @@ require_once "awards/award.php";
 require_once "relays.php";
 
 function get_points(&$relay) {
+      if ($relay->data["points"]) {
+            return $relay->data["points"];
+      }
+
       $points = 0;
       global $awards;
       foreach ($awards as $award) {
@@ -11,6 +15,8 @@ function get_points(&$relay) {
                   $points += $award->get_points();
             }
       }
+
+      $relay->data["points"] = $points;
 
       return $points;
 }
@@ -84,9 +90,9 @@ function table_relays($relays) {
 
             return ($p > $p1) ? -1 : 1;
       }
+      echo count($relays);
 
       usort($relays, "compare_points");
-
       for ($i = 0; $i < count($relays); $i++) {
             $relay = $relays[$i];
 
