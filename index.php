@@ -48,7 +48,7 @@ $search = $_GET["s"];
 $can_search = isset($search) && strlen($search) >= MIN_SEARCH && strlen($search) <= MAX_SEARCH;
 
 if ($can_search) {
-      $relays = Relays::query_relays(htmlspecialchars($search), false);
+      $relays = Relays::query_relays(htmlspecialchars($search), true);
 
       function compare_points($a, $b) {
             $p = get_points($a);
