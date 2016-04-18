@@ -41,6 +41,23 @@ if(empty($_GET['s'])) {
 
 require_once "relays.php";
 
+function match($relay, $search) {
+      $to_search = [
+            $relay["nick"],
+            $relay["fingerprint"],
+            $relay["country"],
+            $relay["country_name"],
+      ];
+
+      foreach ($to_search as $term) {
+            if (strpos($term, $search) !== false) {
+                  return true;
+            }
+      }
+
+      return false;
+}
+
 const MIN_SEARCH = 2;
 const MAX_SEARCH = 25;
 
@@ -51,10 +68,6 @@ if ($can_search) {
       $search = htmlspecialchars($search);
 
       $relays = json_decode(file_get_contents("cache/cache.txt"), true);
-
-      function match($relay, $search) {
-            return strpos($relay["nick"], $search) !== false;
-      }
 
       $sorted = [];
 
