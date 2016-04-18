@@ -23,9 +23,9 @@ require_once "header.php";
                             </thead>
                             <tbody>
 <?php
-$relays = Relays::query_relays("", true);
+$relays = json_decode(file_get_contents("cache/top_cache.txt"), true);
 
-table_relays($relays, 0, AMOUNT);
+table_relays($relays, 0, AMOUNT, false, true);
 ?>
                             </tbody>
                       </table>
