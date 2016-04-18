@@ -45,3 +45,15 @@ $awards = [
       new Alpha,
       new Ipv6
 ];
+
+function get_by_name($name) {
+      global $awards;
+
+      foreach ($awards as $award) {
+            if ($award->get_name() == $name) {
+                  return $award;
+            }
+      }
+
+      return null;
+}
