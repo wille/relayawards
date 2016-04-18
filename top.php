@@ -1,5 +1,6 @@
 <?php
 const AMOUNT = 100;
+const CACHE_FILE = "cache/top_cache.txt";
 
 $title = "Top " . AMOUNT . " - RelayAwards";
 
@@ -23,7 +24,7 @@ require_once "header.php";
                             </thead>
                             <tbody>
 <?php
-$relays = json_decode(file_get_contents("cache/top_cache.txt"), true);
+$relays = json_decode(file_get_contents(CACHE_FILE), true);
 
 table_relays($relays, 0, AMOUNT, false, true);
 ?>
