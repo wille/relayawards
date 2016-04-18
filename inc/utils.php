@@ -95,9 +95,9 @@ function print_relay_to_table($i, $relay, $cached = false) {
       echo "</td></tr>";
 }
 
-function sort_relays($relays, $offset = 0, $length = 0, $cached = false) {
+function sort_relays($relays, $offset = 0, $length = 0) {
       function compare_points($a, $b) {
-            $cached = is_array($a);
+            $cached = is_array($a); // is cached
 
             $p = $cached ? $a["points"] : get_points($a);
             $p1 = $cached ? $b["points"] : get_points($b);
@@ -120,7 +120,7 @@ function sort_relays($relays, $offset = 0, $length = 0, $cached = false) {
 
 function table_relays($relays, $offset = 0, $length = 0, $sort = false, $cached = false) {
       if ($sort) {
-            $relays = sort_relays($relays, $offset, $length, $cached);
+            $relays = sort_relays($relays, $offset, $length);
       }
 
       for ($i = 0; $i < count($relays); $i++) {
