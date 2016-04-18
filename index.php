@@ -48,9 +48,23 @@ $search = $_GET["s"];
 $can_search = isset($search) && strlen($search) >= MIN_SEARCH && strlen($search) <= MAX_SEARCH;
 
 if ($can_search) {
-      $relays = Relays::query_relays(htmlspecialchars($search), true);
+      $search = htmlspecialchars($search);
 
-      table_relays($relays);
+      $relays = json_decode(file_get_contents("cache/cache.txt"), true);
+
+      function match($relay, $search) {
+            return strpos($relay["nick"], $search) !== false;
+      }
+
+      $sorted = [];
+
+      for ($i = 0; $i < count($relays); $i++) {
+            if (match($relays[$i], $search)) {
+                  $sorted[] = $relays[$i];
+            }
+      }
+
+      table_relays($sorted, 0, 0, false, true);
 } else {
       echo "Minimum search is " . MIN_SEARCH . ", maximum is " . MAX_SEARCH;
 }
