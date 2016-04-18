@@ -1,10 +1,10 @@
 <?php
 
-require_once "awards/award.php";
-require_once "relays.php";
+include_once "awards/award.php";
+include_once "relays.php";
 
 function get_points(&$relay) {
-      if ($relay->data["points"]) {
+      if (isset($relay->data["points"])) {
             return $relay->data["points"];
       }
 
@@ -48,30 +48,46 @@ function format_uptime($relay) {
       return $uptime;
 }
 
-function print_relay_to_table($i, $relay) {
+function print_relay_to_table($i, $relay, $cached = false) {
+      $points = $cached ? $relay["points"] : get_points($relay);
+      $fp = $cached ? $relay["fingerprint"] : $relay->fingerprint;
+      $nick = $cached ? $relay["nick"] : $relay->nick;
+      $country = $cached ? $relay["country"] : $relay->country;
+      $uptime = $cached ? $relay["uptime"] : format_uptime($relay);
+      $bw = $cached ? $relay["bandwidth"] : $relay->get_current_bandwidth();
+
       echo "<tr>";
-      echo "<td>" . ($i == 0 ? '<i class="fa fa-trophy"></i>' : ($i + 1)) . " (" . get_points($relay) . ")</td>";
-      echo '<td><a href="relay.php?fp=' . $relay->fingerprint . '">' . $relay->nick . "</a></td>";
+      echo "<td>" . ($i == 0 ? '<i class="fa fa-trophy"></i>' : ($i + 1)) . " (" . $points . ")</td>";
+      echo '<td><a href="relay.php?fp=' . $fp . '">' . $nick . "</a></td>";
 
-      echo "<td>" . format_uptime($relay) . "</td>";
+      echo "<td>" . $uptime . "</td>";
 
-      echo "<td>" . $relay->get_current_bandwidth() . "</td>";
-      echo '<td><img src="images/flags/'. $relay->country . '.png"></td>';
+      echo "<td>" . $bw . "</td>";
+      echo '<td><img src="images/flags/'. $country . '.png"></td>';
 
       $granted = array();
 
-      global $awards;
-      foreach ($awards as $award) {
-            if ($award->is_granted($relay)) {
-                  $granted[] = $award;
+      if (!$cached) {
+            global $awards;
+            foreach ($awards as $award) {
+                  if ($award->is_granted($relay)) {
+                        $granted[] = $award;
+                  }
             }
+      } else {
+            $granted = $relay["granted"];
       }
+
 
       $has_awards = count($granted) > 0;
 
       echo "<td>";
+
       if ($has_awards) {
             foreach ($granted as $award) {
+                  if ($cached) {
+                        $award = get_by_name($award);
+                  }
                   echo '<a href="awards/award.php?award=' . urlencode($award->get_name()) . '"><img src="images/rewards/' . $award->get_icon() . '" title="' . $award->get_description() . '" alt="' . $award->get_name() . '" width=32px height=32px></a>';
             }
       }
@@ -79,10 +95,12 @@ function print_relay_to_table($i, $relay) {
       echo "</td></tr>";
 }
 
-function table_relays($relays, $offset = 0, $length = 0) {
+function sort_relays($relays, $offset = 0, $length = 0, $cached = false) {
       function compare_points($a, $b) {
-            $p = get_points($a);
-            $p1 = get_points($b);
+            $cached = is_array($a);
+
+            $p = $cached ? $a["points"] : get_points($a);
+            $p1 = $cached ? $b["points"] : get_points($b);
 
             if ($p == $p1) {
                   return 0;
@@ -97,10 +115,18 @@ function table_relays($relays, $offset = 0, $length = 0) {
             $relays = array_slice($relays, $offset, $length);
       }
 
+      return $relays;
+}
+
+function table_relays($relays, $offset = 0, $length = 0, $sort = false, $cached = false) {
+      if ($sort) {
+            $relays = sort_relays($relays, $offset, $length, $cached);
+      }
+
       for ($i = 0; $i < count($relays); $i++) {
             $relay = $relays[$i];
 
-            print_relay_to_table($i, $relay);
+            print_relay_to_table($i, $relay, $cached);
       }
 }
 ?>
