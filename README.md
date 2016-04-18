@@ -4,6 +4,11 @@ Award system for Tor relays
 
 ![logo](images/static/relayawards_logo.png)
 
+## Dependencies
+
+- [onionphp](https://github.com/redpois0n/onionphp)
+- php5-curl ```sudo apt-get install php5-curl```
+
 
 ## Credits
 
