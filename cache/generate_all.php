@@ -5,7 +5,7 @@ const FILE = "cache.txt";
 require_once "cache.php";
 
 echo "Downloading all relays...\n";
-$relays = Relays::query_relays("", false);
+$relays = Relays::query_relays("");
 
 echo "Sorting relays (0 -> " . count($relays) . ")\n";
 $relays = sort_relays($relays);
