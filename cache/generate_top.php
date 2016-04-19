@@ -9,6 +9,10 @@ require_once "cache.php";
 echo "Downloading all relays...\n";
 $relays = Relays::query_relays("");
 
+if (count($relays) == 0) {
+      die("No relays found, will not overwrite existing cache");
+}
+
 echo "Sorting relays (0 -> " . AMOUNT . ")\n";
 $relays = sort_relays($relays, 0, AMOUNT);
 
