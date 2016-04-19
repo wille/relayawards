@@ -50,7 +50,7 @@ function match($relay, $search) {
       ];
 
       foreach ($to_search as $term) {
-            if (strpos($term, $search) !== false) {
+            if (strpos(strtolower($term), strtolower($search)) !== false) {
                   return true;
             }
       }
