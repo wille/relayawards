@@ -17,7 +17,7 @@ abstract class GuardProbability extends AbstractLevelAward {
       }
 
       public function is_granted($relay) {
-            return $relay->guard_probability >= $this->fraction;
+            return $relay->guard_probability * 100 >= $this->fraction;
       }
 }
 

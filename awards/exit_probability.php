@@ -17,7 +17,7 @@ abstract class ExitProbability extends AbstractLevelAward {
       }
 
       public function is_granted($relay) {
-            return $relay->exit_probability >= $this->fraction;
+            return $relay->exit_probability * 100 >= $this->fraction;
       }
 }
 

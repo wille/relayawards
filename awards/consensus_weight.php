@@ -17,7 +17,7 @@ abstract class ConsensusWeight extends AbstractLevelAward {
       }
 
       public function is_granted($relay) {
-            return $relay->consensus_weight_fraction >= $this->fraction;
+            return $relay->consensus_weight_fraction * 100 >= $this->fraction;
       }
 }
 
