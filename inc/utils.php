@@ -49,12 +49,12 @@ function format_uptime($relay) {
 }
 
 function print_relay_to_table($i, $relay, $cached = false) {
-      $points = $cached ? $relay["points"] : get_points($relay);
-      $fp = $cached ? $relay["fingerprint"] : $relay->fingerprint;
-      $nick = $cached ? $relay["nick"] : $relay->nick;
-      $country = $cached ? $relay["country"] : $relay->country;
-      $uptime = $cached ? $relay["uptime"] : format_uptime($relay);
-      $bw = $cached ? $relay["bandwidth"] : $relay->get_current_bandwidth();
+      $points = $relay["points"];
+      $fp = $relay["fingerprint"];
+      $nick = $relay["nick"];
+      $country = $relay["country"];
+      $uptime = $relay["uptime"];
+      $bw = $relay["bandwidth"];
 
       echo "<tr>";
       echo "<td>" . ($i == 0 ? '<i class="fa fa-trophy"></i>' : ($i + 1)) . " (" . $points . ")</td>";
@@ -65,19 +65,7 @@ function print_relay_to_table($i, $relay, $cached = false) {
       echo "<td>" . $bw . "</td>";
       echo '<td><img src="images/flags/'. $country . '.png"></td>';
 
-      $granted = array();
-
-      if (!$cached) {
-            global $awards;
-            foreach ($awards as $award) {
-                  if ($award->is_granted($relay)) {
-                        $granted[] = $award;
-                  }
-            }
-      } else {
-            $granted = $relay["granted"];
-      }
-
+      $granted = $relay["granted"];
 
       $has_awards = count($granted) > 0;
 
@@ -97,10 +85,8 @@ function print_relay_to_table($i, $relay, $cached = false) {
 
 function sort_relays($relays, $offset = 0, $length = 0) {
       function compare_points($a, $b) {
-            $cached = is_array($a); // is cached
-
-            $p = $cached ? $a["points"] : get_points($a);
-            $p1 = $cached ? $b["points"] : get_points($b);
+            $p = $a["points"];
+            $p1 = $b["points"];
 
             if ($p == $p1) {
                   return 0;
@@ -118,7 +104,7 @@ function sort_relays($relays, $offset = 0, $length = 0) {
       return $relays;
 }
 
-function table_relays($relays, $offset = 0, $length = 0, $sort = false, $cached = false) {
+function table_relays($relays, $offset = 0, $length = 0, $sort = false) {
       if ($sort) {
             $relays = sort_relays($relays, $offset, $length);
       }
@@ -126,7 +112,7 @@ function table_relays($relays, $offset = 0, $length = 0, $sort = false, $cached 
       for ($i = 0; $i < count($relays); $i++) {
             $relay = $relays[$i];
 
-            print_relay_to_table($i, $relay, $cached);
+            print_relay_to_table($i, $relay);
       }
 }
 ?>
