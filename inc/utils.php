@@ -85,8 +85,9 @@ function print_relay_to_table($i, $relay, $cached = false) {
 
 function sort_relays($relays, $offset = 0, $length = 0) {
       function compare_points($a, $b) {
-            $p = $a["points"];
-            $p1 = $b["points"];
+            $cache = is_array($a);
+            $p = $cache ? $a["points"] : get_points($a);
+            $p1 = $cache ? $b["points"] : get_points($b);
 
             if ($p == $p1) {
                   return 0;
