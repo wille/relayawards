@@ -83,19 +83,19 @@ function print_relay_to_table($i, $relay, $cached = false) {
       echo "</td></tr>";
 }
 
-function sort_relays($relays, $offset = 0, $length = 0) {
-      function compare_points($a, $b) {
-            $cache = is_array($a);
-            $p = $cache ? $a["points"] : get_points($a);
-            $p1 = $cache ? $b["points"] : get_points($b);
+function compare_points($a, $b) {
+      $cache = is_array($a);
+      $p = $cache ? $a["points"] : get_points($a);
+      $p1 = $cache ? $b["points"] : get_points($b);
 
-            if ($p == $p1) {
-                  return 0;
-            }
-
-            return ($p > $p1) ? -1 : 1;
+      if ($p == $p1) {
+            return 0;
       }
 
+      return ($p > $p1) ? -1 : 1;
+}
+
+function sort_relays($relays, $offset = 0, $length = 0) {
       usort($relays, "compare_points");
 
       if ($offset != 0 || $length != 0) {

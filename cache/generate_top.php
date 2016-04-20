@@ -2,7 +2,7 @@
 
 // Only sort up to AMOUNT (change in top.php as well)
 const AMOUNT = 100;
-const FILE = "top_cache.txt";
+const FILE_TOP = "top_cache.txt";
 
 require_once "cache.php";
 
@@ -19,7 +19,7 @@ $relays = sort_relays($relays, 0, AMOUNT);
 echo "Generating cache...\n";
 $cached = cache_multiple($relays);
 
-echo "Writing to " . FILE . "\n";
-file_put_contents(FILE, json_encode($cached));
+echo "Writing to " . FILE_TOP . "\n";
+file_put_contents(FILE_TOP, json_encode($cached));
 
 ?>
