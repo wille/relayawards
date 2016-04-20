@@ -48,7 +48,7 @@ function format_uptime($relay) {
       return $uptime;
 }
 
-function print_relay_to_table($i, $relay, $cached = false) {
+function print_relay_to_table($i, $relay) {
       $points = $relay["points"];
       $fp = $relay["fingerprint"];
       $nick = $relay["nick"];
@@ -73,9 +73,7 @@ function print_relay_to_table($i, $relay, $cached = false) {
 
       if ($has_awards) {
             foreach ($granted as $award) {
-                  if ($cached) {
-                        $award = get_by_name($award);
-                  }
+                  $award = get_by_name($award);
                   echo '<a href="awards/award.php?award=' . urlencode($award->get_name()) . '"><img src="images/rewards/' . $award->get_icon() . '" title="' . $award->get_description() . '" alt="' . $award->get_name() . '" width=32px height=32px></a>';
             }
       }
