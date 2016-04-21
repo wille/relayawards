@@ -1,6 +1,6 @@
 <?php
 const AMOUNT = 100;
-const CACHE_FILE = "cache/top_cache.txt";
+const CACHE_FILE = "cache/cache.txt";
 
 $title = "Top " . AMOUNT . " - RelayAwards";
 
@@ -30,6 +30,7 @@ table_relays($relays, 0, AMOUNT, false, true);
 ?>
                             </tbody>
                       </table>
+                      <?php echo "Last updated " . getTimeSince(file_get_contents("cache/time.txt")) . " ago"; ?>
                 </div>
           </div>
    </div>

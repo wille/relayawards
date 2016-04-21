@@ -82,9 +82,14 @@ if ($can_search) {
       echo "Minimum search is " . MIN_SEARCH . ", maximum is " . MAX_SEARCH;
 }
 
+if(!empty($_GET['s'])) {
+      echo '</tbody>
+      </table>
+      Last updated ' . getTimeSince(file_get_contents("cache/time.txt")) . " ago";
+}
 ?>
-                                    </tbody>
-                              </table>
+
+
                         </div>
                   </div>
             </div>
