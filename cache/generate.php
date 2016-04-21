@@ -19,4 +19,7 @@ $cached = cache_multiple($relays);
 echo "Writing to " . FILE . "\n";
 file_put_contents(FILE, json_encode($cached));
 
+echo "Writing current time...\n";
+update();
+
 ?>

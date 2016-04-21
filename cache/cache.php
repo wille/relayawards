@@ -38,6 +38,9 @@ function cache($relay) {
       return $data;
 }
 
+/*
+      Puts the current time in DOCUMENT_ROOT + "/cache/time.txt" so we know when we last updated our data
+*/
 function update() {
       file_put_contents("time.txt", time());
 }
