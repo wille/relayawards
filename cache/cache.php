@@ -39,7 +39,7 @@ function cache($relay) {
 }
 
 function update() {
-      file_put_contents("time", time());
+      file_put_contents("time.txt", time());
 }
 
 ?>
