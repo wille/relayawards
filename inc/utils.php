@@ -117,7 +117,7 @@ function table_relays($relays, $offset = 0, $length = 0, $sort = false) {
 
 function getTimeSince($eventTime)
 {
-    $totaldelay = time() - strtotime($eventTime);
+    $totaldelay = time() - $eventTime;
     if($totaldelay <= 0)
     {
         return '';
