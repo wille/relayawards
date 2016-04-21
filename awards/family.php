@@ -21,7 +21,7 @@ abstract class Family extends AbstractLevelAward {
       }
 }
 
-class Family1 extends ExitProbability {
+class Family1 extends Family {
 
       public function __construct() {
             parent::__construct(1, 1, 1);
