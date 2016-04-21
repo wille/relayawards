@@ -1,7 +1,6 @@
 <?php
 
 const FILE = "cache.txt";
-
 require_once "cache.php";
 
 echo "Downloading all relays...\n";

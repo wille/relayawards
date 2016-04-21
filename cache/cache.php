@@ -38,4 +38,8 @@ function cache($relay) {
       return $data;
 }
 
+function update() {
+      file_put_contents("time", time());
+}
+
 ?>

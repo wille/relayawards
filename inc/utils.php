@@ -108,10 +108,90 @@ function table_relays($relays, $offset = 0, $length = 0, $sort = false) {
             $relays = sort_relays($relays, $offset, $length);
       }
 
-      for ($i = 0; $i < count($relays); $i++) {
+      for ($i = 0; $i < count($relays) && ($i == 0 || $i < $length); $i++) {
             $relay = $relays[$i];
 
             print_relay_to_table($i, $relay);
       }
+}
+
+function getTimeSince($eventTime)
+{
+    $totaldelay = time() - strtotime($eventTime);
+    if($totaldelay <= 0)
+    {
+        return '';
+    }
+    else
+    {
+        $first = '';
+        $marker = 0;
+        if($years=floor($totaldelay/31536000))
+        {
+            $totaldelay = $totaldelay % 31536000;
+            $plural = '';
+            if ($years > 1) $plural='s';
+            $interval = $years." year".$plural;
+            $timesince = $timesince.$first.$interval;
+            if ($marker) return $timesince;
+            $marker = 1;
+            $first = ", ";
+        }
+        if($months=floor($totaldelay/2628000))
+        {
+            $totaldelay = $totaldelay % 2628000;
+            $plural = '';
+            if ($months > 1) $plural='s';
+            $interval = $months." month".$plural;
+            $timesince = $timesince.$first.$interval;
+            if ($marker) return $timesince;
+            $marker = 1;
+            $first = ", ";
+        }
+        if($days=floor($totaldelay/86400))
+        {
+            $totaldelay = $totaldelay % 86400;
+            $plural = '';
+            if ($days > 1) $plural='s';
+            $interval = $days." day".$plural;
+            $timesince = $timesince.$first.$interval;
+            if ($marker) return $timesince;
+            $marker = 1;
+            $first = ", ";
+        }
+        if ($marker) return $timesince;
+        if($hours=floor($totaldelay/3600))
+        {
+            $totaldelay = $totaldelay % 3600;
+            $plural = '';
+            if ($hours > 1) $plural='s';
+            $interval = $hours." hour".$plural;
+            $timesince = $timesince.$first.$interval;
+            if ($marker) return $timesince;
+            $marker = 1;
+            $first = ", ";
+
+        }
+        if($minutes=floor($totaldelay/60))
+        {
+            $totaldelay = $totaldelay % 60;
+            $plural = '';
+            if ($minutes > 1) $plural='s';
+            $interval = $minutes." minute".$plural;
+            $timesince = $timesince.$first.$interval;
+            if ($marker) return $timesince;
+            $first = ", ";
+        }
+        if($seconds=floor($totaldelay/1))
+        {
+            $totaldelay = $totaldelay % 1;
+            $plural = '';
+            if ($seconds > 1) $plural='s';
+            $interval = $seconds." second".$plural;
+            $timesince = $timesince.$first.$interval;
+        }
+        return $timesince;
+
+    }
 }
 ?>
