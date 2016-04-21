@@ -30,9 +30,11 @@ include_once "consensus_weight.php";
 include_once "exit_probability.php";
 include_once "middle_probability.php";
 include_once "guard_probability.php";
+include_once "family.php";
 include_once "ipv6.php";
 
 $awards = [
+      new Family1,
       new Uptime1, new Uptime2, new Uptime3, new Uptime4, new Uptime5, new Uptime6, new Uptime7,
       new Lightning1, new Lightning2, new Lightning3, new Lightning4, new Lightning5, new Lightning6,
       new Https_Lover,
