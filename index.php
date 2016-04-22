@@ -49,9 +49,13 @@ function match($relay, $search) {
             $relay["country_name"],
       ];
 
-      foreach ($to_search as $term) {
-            if (strpos(strtolower($term), strtolower($search)) !== false) {
-                  return true;
+      $search_array = explode("+", $search);
+
+      foreach ($search_array as $s) {
+            foreach ($to_search as $term) {
+                  if (strpos(strtolower($term), strtolower($s)) !== false) {
+                        return true;
+                  }
             }
       }
 
