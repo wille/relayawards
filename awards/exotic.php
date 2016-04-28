@@ -15,13 +15,12 @@ class Exotic extends Award {
       }
 
       public function is_granted($relay) {
-            $exotic_countries = [
-                  "za", "id", "ar", "si", "rs", "ee", "cl", "by", "mx", "am", "sa", "co", "kz", "im",
-                  "al", "eg", "cr", "kg", "pa", "th", "cn", "lr", "eu", "ke", "ba", "cu", "mn", "pk",
-                  "ag", "tj", "np", "ir", "gi", "kg", "ae", "ma"
-            ];
+            if (!isset($GLOBALS["exotics"])) {
+                  $exotic = json_decode(file_get_contents("cache/exotic.txt"), true);
+                  $GLOBALS["exotics"] = $exotic;
+            }
 
-            return in_array($relay->country, $exotic_countries);
+            return array_key_exists($relay->country, $GLOBALS["exotics"]);
       }
 
       public function get_points() {
