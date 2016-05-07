@@ -68,6 +68,19 @@ const MAX_SEARCH = 25;
 $search = $_GET["s"];
 $can_search = isset($search) && strlen($search) >= MIN_SEARCH && strlen($search) <= MAX_SEARCH;
 
+if (strpos($search, "+") !== false) {
+      $search_array = explode("+", $search);
+
+      foreach ($search_array as $s) {
+            $s = trim($s);
+
+            if (strlen($s) < MIN_SEARCH || strlen($s) > MAX_SEARCH) {
+                  $can_search = false;
+                  break;
+            }
+      }
+}
+
 if ($can_search) {
       $search = htmlspecialchars($search);
 
