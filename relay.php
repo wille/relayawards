@@ -47,6 +47,9 @@ echo "<title>" . $relay->nick . " - RelayAwards</title>";
                   <h4>Nickname</h4>
                   <p><?php echo $relay->nick; ?></p>
 
+                  <h4>Contact</h4>
+                  <p><?php echo htmlspecialchars($relay->contact); ?></p>
+
                   <h4>Uptime</h4>
                   <p><?php echo format_uptime($relay); ?></p>
 
