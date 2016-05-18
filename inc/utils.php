@@ -108,7 +108,9 @@ function table_relays($relays, $offset = 0, $length = 0, $sort = false) {
             $relays = sort_relays($relays, $offset, $length);
       }
 
-      for ($i = 0; $i < count($relays) && ($length == 0 || $i < $length); $i++) {
+      $count = count($relays);
+      
+      for ($i = 0; $i < $count && ($length == 0 || $i < $length); $i++) {
             $relay = $relays[$i];
 
             print_relay_to_table($i, $relay);
