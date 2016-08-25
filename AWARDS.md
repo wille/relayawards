@@ -4,7 +4,8 @@
 | :--- | :-----
 | ![Exotic](images/rewards/exotic.png) Exotic | Node placed in an exotic country
 | ![Alpha](images/rewards/alpha.png) Alpha | Is running an alpha version of Tor
-| ![Unix](images/rewards/linux.png) Unix | Runs Linux or *BSD 
+| ![Stable](images/rewards/stable.png) Stable | Is running a stable version of Tor
+| ![Unix](images/rewards/linux.png) Unix | Runs Linux or *BSD
 | ![Contact](images/rewards/contact.png) Contact | Has an email address or BTC address in contact information
 | ![IPV6](images/rewards/IPv6.png) IPV6 | IPV6 support in DirAdr or ORAdr
 | ![HTTPS Lover](images/rewards/https_lover.png) HTTPS Lover | Uses port 80 or 443 in DirPort or ORPort

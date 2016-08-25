@@ -1,21 +1,21 @@
 <?php
 
-class Alpha extends Award {
+class Stable extends Award {
 
       public function get_name() {
-            return "Alpha";
+            return "Stable";
       }
 
       public function get_icon() {
-            return "alpha.png";
+            return "stable.png";
       }
 
       public function get_description() {
-            return "Is running an alpha version of Tor";
+            return "Is running a stable version of Tor";
       }
 
       public function is_granted($relay) {
-            return strpos(strtolower($relay->platform), "alpha") !== false;
+            return strpos(strtolower($relay->platform), "alpha") === false;
       }
 
       public function get_points() {

@@ -32,6 +32,7 @@ include_once "middle_probability.php";
 include_once "guard_probability.php";
 include_once "family.php";
 include_once "ipv6.php";
+include_once "stable.php";
 
 $awards = [
       new Family1,
@@ -45,7 +46,8 @@ $awards = [
       new Exotic,
       new Unix,
       new Alpha,
-      new Ipv6
+      new Ipv6,
+      new Stable
 ];
 
 function get_by_name($name) {
