@@ -20,7 +20,7 @@ require_once "awards/award.php";
 
 <?php
 foreach ($awards as $award) {
-      echo "<tr>";
+      echo "<tr id='" . $award->get_name() . "'>";
 
       echo '<td><img src="images/rewards/' . $award->get_icon() . '"></td>';
       echo "<td>" . $award->get_description() . "</td>";
