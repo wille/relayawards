@@ -17,3 +17,10 @@ Award system for Tor relays
 ## Awards
 
 See [AWARDS.md](AWARDS.md)
+
+## Installation
+
+```
+$ git submodule init
+$ git submodule update
+```
