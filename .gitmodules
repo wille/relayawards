@@ -1,0 +1,3 @@
+[submodule "onionphp"]
+	path = onionphp
+	url = git@github.com:redpois0n/onionphp
