@@ -1,7 +1,7 @@
 <?php
 
 include_once "awards/award.php";
-include_once "relays.php";
+include_once "onionphp/relays.php";
 
 function get_points(&$relay) {
       if (isset($relay->data["points"])) {

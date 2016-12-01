@@ -39,7 +39,7 @@ if(empty($_GET['s'])) {
 
 <?php
 
-require_once "relays.php";
+require_once "onionphp/relays.php";
 
 function match($relay, $search) {
       $to_search = [
