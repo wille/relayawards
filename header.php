@@ -33,6 +33,9 @@
                               <a href="awards.php">Awards</a>
                           </li>
                            <li>
+                              <a href="top.php">Leaderboard</a>
+                          </li>
+                           <li>
                               <a href="about.php">About</a>
                           </li>
 
